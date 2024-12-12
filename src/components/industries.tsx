@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
@@ -45,6 +47,8 @@ export const Industries = (props: Layout396Props) => {
 
   const { data } = useFetch<any>("/portfoliopage/industries/");
 
+  console.log(data);
+
   const handleViewMore = () => {
     setVisibleCount((prevCount) => prevCount + 4); // Show 4 more cards
   };
@@ -79,7 +83,7 @@ export const Industries = (props: Layout396Props) => {
           <p className="mb-3 text-[16px] leading-4 font-semibold md:mb-4 text-blue-200">
             {tagline}
           </p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl text-blue-50 lg:text-8xl">
+          <h1 className="mb-5 text-5xl font-extrabold md:mb-6 md:text-7xl text-blue-50 lg:text-8xl">
             {heading}
           </h1>
           <p className="md:text-[16px] leading-6 text-blue-200">
@@ -132,7 +136,7 @@ const FeatureSection = (featureSection: any) => (
     <div>
       <div className="rb-5 mb-5 md:mb-6">
         <img
-          src={`http://192.168.1.11:8000${featureSection?.image}`}
+          src={`https://aliasgarkachwala.pythonanywhere.com/${featureSection?.image}`}
           className="w-full rounded-md"
           alt=""
         />

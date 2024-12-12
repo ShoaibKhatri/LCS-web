@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { Navbar } from "../components/navbar";
 import { AboutHero } from "../components/AboutHero";
@@ -16,7 +18,7 @@ const About = () => {
     title2: "Through",
     title2Gradient: "Technology",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+      "At LCS, our goal is to simplify complex challenges through innovative, low-code and no-code solutions that deliver real results. We’re a dedicated team of tech experts, strategists and creators focused on transforming your ideas into impactful digital solutions. Our commitment to excellence drives us to continuously innovate, adapt and deliver exceptional service across industries.",
     buttons: [{ title: "Button" }, { title: "Button", variant: "secondary" }],
     firstImage: {
       src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-dim.png",
@@ -37,8 +39,8 @@ const About = () => {
       <AboutHero {...AboutProps} />
       <AboutMission />
       <AboutTeam />
-      <Partnering />
       <Gallery />
+      <Partnering />
       <ContactComponent />
       <Footer />
     </div>

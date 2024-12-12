@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { useState } from "react";
@@ -59,7 +61,10 @@ export const InnovativeSolutions = (props: Layout351Props) => {
   };
 
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+    <section
+      id="relume"
+      className="px-[5%] bg-[#EFF6FF] py-16 md:py-24 lg:py-28"
+    >
       <div className="container">
         <div className="rb-12 mb-12 text-center w-full  md:mb-18 lg:mb-20">
           <h5
@@ -111,7 +116,7 @@ const FeatureCard = ({
   const CardContent = isMobile ? motion.div : "div";
   return (
     <motion.div
-      className="flex flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row border border-r-2 border-r-gray-200"
+      className="flex  flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row "
       style={{
         boxShadow:
           "25px 0px 30px 0px rgba(197, 197, 197, 0.25), 12px 0px 20px -10px rgba(0, 0, 0, 0.15)",
@@ -123,7 +128,7 @@ const FeatureCard = ({
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="relative flex h-16 w-full min-w-full cursor-pointer items-center justify-center border-t border-border-primary py-8 md:h-20 lg:h-[90vh] lg:w-20 lg:min-w-20 lg:flex-col lg:justify-between lg:border-none">
+      <div className="relative  flex h-16 w-full min-w-full cursor-pointer items-center justify-center border-t border-border-primary py-8 md:h-20 lg:h-[90vh] lg:w-20 lg:min-w-20 lg:flex-col lg:justify-between lg:border-none">
         <p className="text-blue-300 absolute left-6 whitespace-nowrap text-xl font-bold md:left-10 md:text-2xl lg:relative lg:left-0">
           {feature.columnText}
         </p>

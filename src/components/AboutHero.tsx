@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
 import Arrow from "../assets/images/arrowWhite.svg";
@@ -55,7 +57,7 @@ export const AboutHero = (props: Header129Props) => {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 md:gap-16">
           <div>
             <h5
-              className="mb-1 font-thin "
+              className="mb-1 pt-4 md:pt-0 font-thin "
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -64,7 +66,7 @@ export const AboutHero = (props: Header129Props) => {
             >
               {title}
             </h5>
-            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+            <p className="text-4xl !mb-0 font-semibold md:text-6xl lg:text-8xl">
               {title1}
               <span
                 className=" ml-2"
@@ -76,9 +78,9 @@ export const AboutHero = (props: Header129Props) => {
               >
                 {title1Gradient}
               </span>
-            </h2>
+            </p>
             {title2 && (
-              <h2 className="mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+              <p className=" text-4xl !mb-2  font-extrabold md:text-6xl lg:text-8xl">
                 {title2}
                 <span
                   className="ml-3"
@@ -90,10 +92,10 @@ export const AboutHero = (props: Header129Props) => {
                 >
                   {title2Gradient}
                 </span>
-              </h2>
+              </p>
             )}
 
-            <p className="md:text-md text-gray-500">{description}</p>
+            <p className="md:text-md">{description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
               <PrimaryBtn variant="primary">
                 Get Started

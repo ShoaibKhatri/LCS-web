@@ -1,4 +1,5 @@
-import React from "react";
+/** @format */
+
 import { Navbar } from "../components/navbar";
 import { IndustryHero } from "../components/IndustryHero";
 import { IndustriesWeServe } from "../components/IndustriesWeServe";
