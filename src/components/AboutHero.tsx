@@ -4,8 +4,12 @@ import Arrow from "../assets/images/arrowWhite.svg";
 import AboutHeroTop from "../assets/images/AboutHeroTop.svg";
 import AboutHeroBottom from "../assets/images/AboutHeroBottom.svg";
 import Earth from "../assets/images/InterconnectedEarth.svg";
+import CareerHeroTop from "../assets/images/CareerTop.svg";
+import CareerCenter from "../assets/images/CareerCenter.svg";
+import CareerHeroBottom from "../assets/images/CareerBottom.svg";
 import SecondaryButton from "../components/secondaryBtn";
 import PrimaryBtn from "../components/primaryBtn";
+import { useLocation } from "react-router-dom";
 
 type ImageProps = {
   src: string;
@@ -30,6 +34,7 @@ export type Header129Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const AboutHero = (props: Header129Props) => {
+  const location = useLocation();
   const {
     description,
     firstImage,
@@ -109,21 +114,27 @@ export const AboutHero = (props: Header129Props) => {
           <div className="relative flex w-full">
             <div className="absolute bottom-[10%] left-0 w-[35%]">
               <img
-                src={AboutHeroBottom}
+                src={
+                  location.pathname === "/about"
+                    ? AboutHeroBottom
+                    : CareerHeroBottom
+                }
                 className="aspect-square size-full rounded-md object-cover"
                 alt={firstImage.alt}
               />
             </div>
             <div className="mx-[10%] w-full">
               <img
-                src={Earth}
+                src={location.pathname === "/about" ? Earth : CareerCenter}
                 className="aspect-square size-full object-cover"
                 alt={secondImage.alt}
               />
             </div>
             <div className="absolute right-0 top-[10%] w-2/5">
               <img
-                src={AboutHeroTop}
+                src={
+                  location.pathname === "/about" ? AboutHeroTop : CareerHeroTop
+                }
                 className="aspect-[3/2] size-full rounded-md object-cover"
                 alt={thirdImage.alt}
               />

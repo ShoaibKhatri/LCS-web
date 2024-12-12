@@ -16,7 +16,7 @@ const primaryBtn: React.FC<ButtonProps> = ({ children, variant }) => {
   return (
     <div>
       <Button
-        className={`w-full rounded-xl text-white border-0 p-3`}
+        className={`w-full rounded-xl text-white border-0 px-4 py-3`}
         style={{ background: buttonClass }}
       >
         {children}

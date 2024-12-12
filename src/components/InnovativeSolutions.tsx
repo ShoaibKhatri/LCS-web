@@ -4,6 +4,10 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
+import Card1 from "../assets/images/serviceCard1.svg";
+import Card2 from "../assets/images/serviceCard2.svg";
+import Card3 from "../assets/images/serviceCard3.svg";
+import Card4 from "../assets/images/serviceCard4.svg";
 
 type ImageProps = {
   src: string;
@@ -183,7 +187,7 @@ export const Layout351Defaults: Layout351Props = {
       description:
         "Our Low-Code Development service empowers businesses to create applications rapidly, cutting down on traditional development timelines. Our team works closely with you to create flexible applications that meet your exact needs.",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Card1,
         alt: "Relume placeholder image 1",
       },
     },
@@ -201,7 +205,7 @@ export const Layout351Defaults: Layout351Props = {
       description:
         "LCS’s No-Code Solutions open up new possibilities for non-technical teams by providing them with the tools to create, deploy, and manage applications without writing a single line of code.",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Card2,
         alt: "Relume placeholder image 2",
       },
     },
@@ -219,7 +223,7 @@ export const Layout351Defaults: Layout351Props = {
       description:
         "Our Full-Stack Development service provides a comprehensive approach to building robust, scalable applications. With expertise in front-end & back-end development, we ensure every layer is seamlessly integrated & performance-optimized.",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Card3,
         alt: "Relume placeholder image 3",
       },
     },
@@ -235,7 +239,7 @@ export const Layout351Defaults: Layout351Props = {
       description:
         "At LCS, we understand that every business has unique requirements that off-the-shelf software can’t address. Our Custom Software Solutions service is designed to provide you with a tailored, end-to-end experience, from initial concept and design to deployment and ongoing support.",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Card4,
         alt: "Relume placeholder image 4",
       },
     },

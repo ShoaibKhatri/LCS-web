@@ -4,6 +4,7 @@ import { colors } from "../constants/theme";
 import HandShake from "../assets/images/Handshake.svg";
 import ListCheck from "../assets/images/ListChecks.svg";
 import SecondaryButton from "../components/secondaryBtn";
+import Integration from "../assets/images/integrationImage.svg";
 
 type ImageProps = {
   src: string;
@@ -130,7 +131,7 @@ export const Layout4Defaults: Layout4Props = {
     },
   ],
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: Integration,
     alt: "Relume placeholder image",
   },
 };

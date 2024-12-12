@@ -57,21 +57,17 @@ export type Layout6Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const IndustriesWeServe = (props: Layout6Props) => {
-  const { image, industryList = IndustryList } = {
+  const { industryList = IndustryList } = {
     ...Layout6Defaults,
     ...props,
   } as Props;
 
-  const { data, loading, error } = useFetch<any>("/portfoliopage/industries/");
-
-  if (data) {
-    console.log(data);
-  }
+  const { data } = useFetch<any>("/portfoliopage/industries/");
 
   const handleScroll = (id: number): void => {
     const section = document.getElementById(id.toString());
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      section.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   };
 
@@ -150,12 +146,13 @@ export const IndustriesWeServe = (props: Layout6Props) => {
       </div>
 
       {/* Specific Industry */}
-      {industryList.map((industry, index) => (
+      {data?.map((industry: any, index: number) => (
         <div
           className="container"
           id={industry.id !== undefined ? String(industry.id) : undefined}
         >
           <div
+            onClick={() => console.log(industry.image)}
             // className={`grid grid-cols-1 ${
             //   index % 2 === 0 ? "" : ""
             // } gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20 my-12`}
@@ -172,7 +169,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                {industry.button?.title}
+                {industry.name}
               </h1>
               <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
                 <div>
@@ -187,11 +184,13 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                     Core Services
                   </h3>
                   <ul className="list-disc ml-6 text-gray-500">
-                    {industry.coreServices?.map((coreService, index) => (
-                      <li className="mb-3 text-md  leading-[1] md:mb-4 ">
-                        {coreService.point}
-                      </li>
-                    ))}
+                    {industry.core_services?.map(
+                      (coreService: any, index: number) => (
+                        <li className="mb-3 text-md  leading-[1] md:mb-4 ">
+                          {coreService}
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
 
@@ -207,20 +206,22 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                     Unique Challenges
                   </h3>
                   <ul className="list-disc ml-6 text-gray-500">
-                    {industry.challenges?.map((challenge, index) => (
-                      <li className="mb-3 text-md leading-[1] md:mb-4 ">
-                        {challenge.point}
-                      </li>
-                    ))}
+                    {industry.unique_challenges?.map(
+                      (challenge: any, index: number) => (
+                        <li className="mb-3 text-md leading-[1] md:mb-4 ">
+                          {challenge}
+                        </li>
+                      )
+                    )}
                   </ul>
                 </div>
               </div>
             </div>
             <div>
               <img
-                src={image.src}
+                src={`http://192.168.1.11:8000${industry.image}`}
                 className="w-[600px] h-full rounded-md object-cover"
-                alt={image.alt}
+                alt=""
               />
             </div>
           </div>

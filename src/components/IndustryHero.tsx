@@ -1,7 +1,8 @@
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
 import PrimaryBtn from "./primaryBtn";
+import IndHeroBig from "../assets/images/indHeroBig.svg";
+import IndHeroSmall from "../assets/images/indHeroSmall.svg";
 
 type ImageProps = {
   src: string;
@@ -59,17 +60,17 @@ export const IndustryHero = (props: Header137Props) => {
           </div>
         </div>
         <div className="relative flex items-center">
-          <div className="absolute w-[45%] pl-[5%] lg:pl-0">
+          <div className="absolute right-0 w-[45%] pr-[5%] lg:pr-0">
             <img
-              src={firstImage.src}
-              alt={firstImage.alt}
+              src={IndHeroSmall}
+              alt=""
               className="aspect-[2/3] w-full object-cover lg:h-full"
             />
           </div>
           <div className="ml-[10%]">
             <img
-              src={secondImage.src}
-              alt={secondImage.alt}
+              src={IndHeroBig}
+              alt=""
               className="w-full object-cover lg:h-screen lg:max-h-[60rem]"
             />
           </div>

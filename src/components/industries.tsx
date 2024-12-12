@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
@@ -10,6 +10,7 @@ import Vector1 from "../assets/images/industriesV1.svg";
 import Vector2 from "../assets/images/industriesV2.svg";
 import Vector3 from "../assets/images/industriesV3.svg";
 import useFetch from "../hooks/useFetch";
+import { Link } from "react-router-dom";
 
 type ImageProps = {
   src: string;
@@ -40,18 +41,9 @@ export const Industries = (props: Layout396Props) => {
   } as Props;
 
   const [visibleCount, setVisibleCount] = useState(8); // Initially show 8 cards
-  const [cardData, setCardData] = useState();
   const navigate = useNavigate();
 
   const { data } = useFetch<any>("/portfoliopage/industries/");
-
-  // useEffect(() => {
-  //   if (data) {
-  //     setCardData(data);
-  //     console.log(cardData);
-  //   }
-  // }, [data]);
-  console.log(process.env.REACT_APP_FE_URL, data);
 
   const handleViewMore = () => {
     setVisibleCount((prevCount) => prevCount + 4); // Show 4 more cards
@@ -100,7 +92,7 @@ export const Industries = (props: Layout396Props) => {
             <FeatureSection key={index} {...feature} />
           ))}
         </div>
-        {!isAllVisible && (
+        {!isAllVisible && data?.length > 0 && (
           <div className="mt-8 text-center ">
             <Button
               className="text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl"
@@ -118,8 +110,8 @@ export const Industries = (props: Layout396Props) => {
         {isAllVisible && (
           <div className="mt-8 text-center ">
             <Button
-              className="text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl"
               onClick={() => navigate("/industries")}
+              className="text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl"
             >
               View All
               <img
@@ -140,26 +132,29 @@ const FeatureSection = (featureSection: any) => (
     <div>
       <div className="rb-5 mb-5 md:mb-6">
         <img
-          src={`http://192.168.1.11:8000/${featureSection?.image}`}
-          className="w-full"
+          src={`http://192.168.1.11:8000${featureSection?.image}`}
+          className="w-full rounded-md"
           alt=""
         />
       </div>
       <h2 className="mb-3 text-xl text-blue-50 font-bold md:mb-4 md:text-xl md:leading-[1.3] lg:text-xl">
         {featureSection?.name}
       </h2>
-      <p className="text-blue-200 text-[16px] line-clamp-3 md:line-clamp-5">
+      <p className="text-blue-200 text-[16px] line-clamp-2 md:line-clamp-3">
         {featureSection?.description}
       </p>
     </div>
     <div className="mt-5 md:mt-6 text-blue-50">
-      <Button
-        className="text-blue-50"
-        title="Learn more"
-        variant="link"
-        size="link"
-        iconRight={<RxChevronRight />}
-      />
+      <Link to="/industries">
+        <Button
+          className="text-blue-50"
+          variant="link"
+          size="link"
+          iconRight={<RxChevronRight />}
+        >
+          Learn more
+        </Button>
+      </Link>
     </div>
   </div>
 );
