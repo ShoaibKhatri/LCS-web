@@ -1,3 +1,5 @@
+/** @format */
+
 import { Button, ButtonProps } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
 import heartbeat from "../assets/images/Heartbeat.svg";
@@ -72,12 +74,12 @@ export const IndustriesWeServe = (props: Layout6Props) => {
   };
 
   return (
-    <section id="relume" className=" py-16 md:py-24 lg:py-28">
-      <div className="bg-blue-50">
-        <div className="container">
-          <div className=" p-5 my-10">
+    <section id='relume' className=' py-16 md:py-24 lg:py-28'>
+      <div className='bg-blue-50'>
+        <div className='container'>
+          <div className=' p-5 my-10'>
             {/* Heading Section */}
-            <div className="mx-auto mb-12 w-full  text-center md:mb-18 lg:mb-20">
+            <div className='mx-auto mb-12 w-full  text-center md:mb-18 lg:mb-20'>
               <p
                 className={`mb-3 font-semibold md:mb-4 `}
                 style={{
@@ -89,7 +91,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
               >
                 Industries We Serve
               </p>
-              <h1 className="mb-5 mr-2 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+              <h1 className='mb-5 mr-2 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
                 Industries We{" "}
                 <span
                   className={` ml-2 `}
@@ -103,7 +105,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                   Aim to Transform
                 </span>
               </h1>
-              <p className="md:text-sm text-gray-500">
+              <p className='md:text-sm text-gray-500'>
                 Our expertise spans a wide range of industries. Whether you’re
                 in healthcare, retail, education, or beyond, LCS understands
                 your challenges and delivers innovative digital solutions to
@@ -113,17 +115,17 @@ export const IndustriesWeServe = (props: Layout6Props) => {
 
             {/* Industry list */}
 
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1">
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
               {industryList?.map((industry, index) => (
                 <div
                   key={index}
-                  className="flex flex-col justify-center bg-transparent p-6 md:p-8"
+                  className='flex flex-col justify-center bg-transparent p-6 md:p-8'
                 >
-                  <div className="">
-                    <div className="rb-5 mb-5 md:mb-6">
-                      <img src={industry.img?.src} className="size-12" alt="" />
+                  <div className=''>
+                    <div className='rb-5 mb-5 md:mb-6'>
+                      <img src={industry.img?.src} className='size-12' alt='' />
                     </div>
-                    <div className="mt-5 md:mb-6 ">
+                    <div className='mt-5 md:mb-6 '>
                       <Button
                         key={index}
                         {...industry.button}
@@ -134,7 +136,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                         {industry.button?.title}
                       </Button>
                     </div>
-                    <p className="text-gray-500 text-[16px] w-full sm:w-[32]  truncate ">
+                    <p className='text-gray-500 text-[16px] w-full sm:w-[32]  truncate '>
                       {industry.description}
                     </p>
                   </div>
@@ -148,7 +150,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
       {/* Specific Industry */}
       {data?.map((industry: any, index: number) => (
         <div
-          className="container"
+          className='container'
           id={industry.id !== undefined ? String(industry.id) : undefined}
         >
           <div
@@ -156,13 +158,13 @@ export const IndustriesWeServe = (props: Layout6Props) => {
             // className={`grid grid-cols-1 ${
             //   index % 2 === 0 ? "" : ""
             // } gap-y-12 md:grid-flow-row md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20 my-12`}
-            className={`flex lg:flex-row mb-10  flex-col items-center justify-center lg:my-12  ${
+            className={`flex md:flex-row mb-10  flex-col items-center justify-center lg:my-20  ${
               index % 2 === 0 ? "" : "lg:flex-row-reverse"
             } mx-6 my8`}
           >
-            <div className=" m-6 w-full">
+            <div className=' m-6 w-full md:w-1/2'>
               <h1
-                className="rb-5 mb-5 text-3xl font-bold leading-[1.2] md:mb-6 md:text-4xl lg:text-6xl"
+                className='rb-5 mb-5 text-3xl font-bold leading-[1.2] md:mb-6 md:text-4xl lg:text-6xl'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -171,10 +173,10 @@ export const IndustriesWeServe = (props: Layout6Props) => {
               >
                 {industry.name}
               </h1>
-              <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
+              <div className='grid grid-cols-1 gap-6 py-2 sm:grid-cols-2'>
                 <div>
                   <h3
-                    className="text-[18px]  mb-4"
+                    className='text-[18px]  mb-4'
                     style={{
                       background: colors.themeGradient,
                       WebkitBackgroundClip: "text",
@@ -183,10 +185,10 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                   >
                     Core Services
                   </h3>
-                  <ul className="list-disc ml-6 text-gray-500">
+                  <ul className='list-disc ml-6 text-gray-500'>
                     {industry.core_services?.map(
                       (coreService: any, index: number) => (
-                        <li className="mb-3 text-md  leading-[1] md:mb-4 ">
+                        <li className='mb-3 text-md  leading-[1] md:mb-4 '>
                           {coreService}
                         </li>
                       )
@@ -196,7 +198,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
 
                 <div>
                   <h3
-                    className="text-[18px] mb-4"
+                    className='text-[18px] mb-4'
                     style={{
                       background: colors.themeGradient,
                       WebkitBackgroundClip: "text",
@@ -205,10 +207,10 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                   >
                     Unique Challenges
                   </h3>
-                  <ul className="list-disc ml-6 text-gray-500">
+                  <ul className='list-disc ml-6 text-gray-500'>
                     {industry.unique_challenges?.map(
                       (challenge: any, index: number) => (
-                        <li className="mb-3 text-md leading-[1] md:mb-4 ">
+                        <li className='mb-3 text-md leading-[1] md:mb-4 '>
                           {challenge}
                         </li>
                       )
@@ -217,11 +219,11 @@ export const IndustriesWeServe = (props: Layout6Props) => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className='w-full md:w-1/2'>
               <img
-                src={`http://192.168.1.11:8000${industry.image}`}
-                className="w-[600px] h-full rounded-md object-cover"
-                alt=""
+                src={`https://aliasgarkachwala.pythonanywhere.com/${industry.image}`}
+                className='size-full rounded-md object-cover'
+                alt=''
               />
             </div>
           </div>

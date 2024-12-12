@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { Navbar } from "../components/navbar";
 import { PortfolioHero } from "../components/PortfolioHero";
@@ -7,6 +9,7 @@ import { FeaturedProjects } from "../components/FeaturedProjects";
 import { ProcessTimeline } from "../components/ProcessTimeline";
 import { Testimonials } from "../components/Testimonials";
 import { RxChevronRight } from "react-icons/rx";
+import { Partnering } from "../components/Partnering";
 
 const Portfolio = () => {
   const project = [
@@ -24,7 +27,7 @@ const Portfolio = () => {
         title: "View project",
         variant: "link",
         size: "link",
-        iconRight: <RxChevronRight className="text-blue-500" />,
+        iconRight: <RxChevronRight className='text-blue-500' />,
       },
       tags: [
         {
@@ -55,7 +58,7 @@ const Portfolio = () => {
         title: "View project",
         variant: "link",
         size: "link",
-        iconRight: <RxChevronRight className="text-blue-500" />,
+        iconRight: <RxChevronRight className='text-blue-500' />,
       },
       tags: [
         {
@@ -86,7 +89,7 @@ const Portfolio = () => {
         title: "View project",
         variant: "link",
         size: "link",
-        iconRight: <RxChevronRight className="text-blue-500" />,
+        iconRight: <RxChevronRight className='text-blue-500' />,
       },
       tags: [
         {
@@ -117,7 +120,7 @@ const Portfolio = () => {
         title: "View project",
         variant: "link",
         size: "link",
-        iconRight: <RxChevronRight className="text-blue-500" />,
+        iconRight: <RxChevronRight className='text-blue-500' />,
       },
       tags: [
         {
@@ -156,6 +159,7 @@ const Portfolio = () => {
       <FeaturedProjects {...Portfolio5Defaults} />
       <ProcessTimeline />
       <Testimonials />
+      <Partnering />
       <ContactComponent />
       <Footer />
     </div>

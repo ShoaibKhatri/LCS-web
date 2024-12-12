@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
 import Arrow from "../assets/images/arrowWhite.svg";
@@ -50,12 +52,12 @@ export const AboutHero = (props: Header129Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[7.9%] py-16 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 md:gap-16">
+    <section id='relume' className='px-[7.9%] py-16 md:py-24 lg:py-28'>
+      <div className='container'>
+        <div className='grid grid-cols-1 items-center gap-12 lg:grid-cols-2 md:gap-16'>
           <div>
             <h5
-              className="mb-1 font-thin "
+              className='mb-1 pt-4 md:pt-0 font-thin '
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -64,10 +66,10 @@ export const AboutHero = (props: Header129Props) => {
             >
               {title}
             </h5>
-            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+            <p className='text-4xl !mb-0 font-semibold md:text-6xl lg:text-8xl'>
               {title1}
               <span
-                className=" ml-2"
+                className=' ml-2'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -76,12 +78,12 @@ export const AboutHero = (props: Header129Props) => {
               >
                 {title1Gradient}
               </span>
-            </h2>
+            </p>
             {title2 && (
-              <h2 className="mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+              <p className=' text-4xl !mb-2  font-extrabold md:text-6xl lg:text-8xl'>
                 {title2}
                 <span
-                  className="ml-3"
+                  className='ml-3'
                   style={{
                     background: colors.themeGradient,
                     WebkitBackgroundClip: "text",
@@ -90,18 +92,18 @@ export const AboutHero = (props: Header129Props) => {
                 >
                   {title2Gradient}
                 </span>
-              </h2>
+              </p>
             )}
 
-            <p className="md:text-md">{description}</p>
-            <div className="mt-6 flex gap-x-4 md:mt-8">
-              <PrimaryBtn variant="primary">
+            <p className='md:text-md'>{description}</p>
+            <div className='mt-6 flex gap-x-4 md:mt-8'>
+              <PrimaryBtn variant='primary'>
                 Get Started
-                <img src={Arrow} className="inline-block ml-2 " alt="" />
+                <img src={Arrow} className='inline-block ml-2 ' alt='' />
               </PrimaryBtn>
               <SecondaryButton
-                color="blue"
-                variant="transparent"
+                color='blue'
+                variant='transparent'
                 sx={{
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
@@ -111,31 +113,31 @@ export const AboutHero = (props: Header129Props) => {
               </SecondaryButton>
             </div>
           </div>
-          <div className="relative flex w-full">
-            <div className="absolute bottom-[10%] left-0 w-[35%]">
+          <div className='relative flex w-full'>
+            <div className='absolute bottom-[10%] left-0 w-[35%]'>
               <img
                 src={
                   location.pathname === "/about"
                     ? AboutHeroBottom
                     : CareerHeroBottom
                 }
-                className="aspect-square size-full rounded-md object-cover"
+                className='aspect-square size-full rounded-md object-cover'
                 alt={firstImage.alt}
               />
             </div>
-            <div className="mx-[10%] w-full">
+            <div className='mx-[10%] w-full'>
               <img
                 src={location.pathname === "/about" ? Earth : CareerCenter}
-                className="aspect-square size-full object-cover"
+                className='aspect-square size-full object-cover'
                 alt={secondImage.alt}
               />
             </div>
-            <div className="absolute right-0 top-[10%] w-2/5">
+            <div className='absolute right-0 top-[10%] w-2/5'>
               <img
                 src={
                   location.pathname === "/about" ? AboutHeroTop : CareerHeroTop
                 }
-                className="aspect-[3/2] size-full rounded-md object-cover"
+                className='aspect-[3/2] size-full rounded-md object-cover'
                 alt={thirdImage.alt}
               />
             </div>

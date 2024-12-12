@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import "antd/dist/reset.css";
 import type { ButtonProps } from "@relume_io/relume-ui";
@@ -7,6 +9,7 @@ import MagnifyingGlass from "../assets/images/MagnifyingGlass.svg";
 import ShieldCheck from "../assets/images/ShieldCheck.svg";
 import Monitor from "../assets/images/Monitor.svg";
 import Globe from "../assets/images/Globe.svg";
+import image from "../assets/images/Group 12.png";
 
 type ImageProps = {
   src: string;
@@ -39,11 +42,11 @@ export const QualityAnalyst = (props: Layout31Props) => {
   const rightFeatures = features.slice(2);
 
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50">
-      <div className="container">
-        <div className="text-center lg:mb-12">
+    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50'>
+      <div className='container'>
+        <div className='text-center lg:mb-12'>
           <p
-            className="mb-3 md:mb-4"
+            className='mb-3 md:mb-4'
             style={{
               background: colors.themeGradient,
               WebkitBackgroundClip: "text",
@@ -52,10 +55,10 @@ export const QualityAnalyst = (props: Layout31Props) => {
           >
             Quality Assurance
           </p>
-          <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+          <h2 className='rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl'>
             Ensuring High Standards for
             <span
-              className=" ml-2"
+              className=' ml-2'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -65,61 +68,61 @@ export const QualityAnalyst = (props: Layout31Props) => {
               Every Project
             </span>
           </h2>
-          <p className="md:text-md text-gray-500">
+          <p className='md:text-md text-gray-500'>
             Our robust testing and quality assurance process ensures your
             product performs flawlessly in all conditions.
           </p>
         </div>
-        <div className="grid grid-cols-1 items-center gap-y-12 lg:grid-cols-3 md:gap-x-12 lg:gap-x-20">
+        <div className='grid grid-cols-1 items-center gap-y-12 lg:grid-cols-3 md:gap-x-12 lg:gap-x-20'>
           {/* Left Features */}
-          <div className="grid grid-cols-1 gap-y-8 sm:my-6">
+          <div className='grid grid-cols-1 gap-y-8 sm:my-6'>
             {leftFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center text-center"
+                className='flex flex-col items-center justify-center text-center'
               >
-                <div className="mb-3 md:mb-4">
+                <div className='mb-3 md:mb-4'>
                   <img
                     src={feature.icon.src}
-                    className="size-12"
+                    className='size-12'
                     alt={feature.icon.alt}
                   />
                 </div>
-                <h1 className="mb-3 text-gray-600 text-xl font-bold md:mb-4 md:text-2xl">
+                <h1 className='mb-3 text-gray-600 text-xl font-bold md:mb-4 md:text-2xl'>
                   {feature.heading}
                 </h1>
-                <p className="text-gray-500">{feature.description}</p>
+                <p className='text-gray-500'>{feature.description}</p>
               </div>
             ))}
           </div>
 
           {/* Center Image */}
-          <div className="flex justify-center">
+          <div className='flex justify-center'>
             <img
               src={image.src}
-              className="w-full max-w-md object-cover rounded-lg"
+              className='w-full max-w-md object-cover rounded-lg'
               alt={image.alt}
             />
           </div>
 
           {/* Right Features */}
-          <div className="grid grid-cols-1 gap-y-8 items-center sm:my-6">
+          <div className='grid grid-cols-1 gap-y-8 items-center sm:my-6'>
             {rightFeatures.map((feature, index) => (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center text-center"
+                className='flex flex-col items-center justify-center text-center'
               >
-                <div className="mb-3 md:mb-4">
+                <div className='mb-3 md:mb-4'>
                   <img
                     src={feature.icon.src}
-                    className="size-12"
+                    className='size-12'
                     alt={feature.icon.alt}
                   />
                 </div>
-                <h1 className="mb-3 text-gray-600 text-xl font-bold md:mb-4 md:text-2xl">
+                <h1 className='mb-3 text-gray-600 text-xl font-bold md:mb-4 md:text-2xl'>
                   {feature.heading}
                 </h1>
-                <p className="text-gray-500">{feature.description}</p>
+                <p className='text-gray-500'>{feature.description}</p>
               </div>
             ))}
           </div>
@@ -198,7 +201,7 @@ export const Layout31Defaults: Layout31Props = {
     },
   ],
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: image,
     alt: "Relume placeholder image",
   },
 };

@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { useMediaQuery } from "@relume_io/relume-ui";
@@ -14,7 +16,8 @@ import {
 } from "framer-motion";
 import React, { useCallback } from "react";
 import { colors } from "../constants/theme";
-
+import backgroundImage from "../assets/images/BackgroundGrid.svg";
+import LightGradient from "../assets/images/LightGradient10.svg";
 type ImageProps = {
   src: string;
   alt?: string;
@@ -107,7 +110,7 @@ export const PortfolioHero = (props: Header142Props) => {
     blur: string
   ) => (
     <motion.div
-      className="absolute inset-0 flex origin-bottom items-center justify-center"
+      className='absolute inset-0 flex origin-bottom items-center justify-center'
       style={{
         ...transformStyles,
         filter: blur, // Add blur filter here
@@ -115,7 +118,7 @@ export const PortfolioHero = (props: Header142Props) => {
     >
       {images.slice(0, positions.length).map((image, index) => (
         <div key={index} className={`absolute w-full ${positions[index]}`}>
-          <img src={image.src} alt={image.alt} className="size-full" />
+          <img src={image.src} alt={image.alt} className='size-full' />
         </div>
       ))}
     </motion.div>
@@ -123,14 +126,19 @@ export const PortfolioHero = (props: Header142Props) => {
 
   return (
     <section
-      className="relative flex h-svh items-center justify-center overflow-hidden lg:h-screen"
-      onMouseMove={handleMouseMove}
+      className='relative flex h-svh items-center justify-center overflow-hidden lg:h-screen'
+      // onMouseMove={handleMouseMove}
+      style={{ backgroundImage: `url("${backgroundImage}")` }}
     >
-      <div className="px-[5%] py-16 md:py-24 lg:py-28">
-        <div className="container max-w-lg">
-          <div className="relative z-10 text-center">
+      <div
+        className='absolute w-full z-10 top-0 right-0 h-full'
+        style={{ backgroundImage: `url("${LightGradient}")` }}
+      ></div>
+      <div className='px-[5%] py-16 md:py-24 lg:py-28'>
+        <div className='container max-w-lg'>
+          <div className='relative z-10 text-center'>
             <h5
-              className="mb-1 font-thin text-center"
+              className='mb-1 font-thin text-center'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -140,28 +148,28 @@ export const PortfolioHero = (props: Header142Props) => {
               Our Success Stories{" "}
             </h5>
 
-            <h1 className="mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl text-center">
-              Through
+            <h1 className='mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl text-center'>
+              Our
               <span
-                className="ml-3"
+                className='ml-3'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Technology
+                Portfolio
               </span>
             </h1>
-            <p className="md:text-md text-center">{description}</p>
-            <div className="mt-6 flex gap-x-4 md:mt-8 items-center justify-center">
-              <PrimaryBtn variant="primary">
+            <p className='md:text-md text-center'>{description}</p>
+            <div className='mt-6 flex gap-x-4 md:mt-8 items-center justify-center'>
+              <PrimaryBtn variant='primary'>
                 Get Started
-                <img src={Arrow} className="inline-block ml-2 " alt="" />
+                <img src={Arrow} className='inline-block ml-2 ' alt='' />
               </PrimaryBtn>
               <SecondaryButton
-                color="blue"
-                variant="transparent"
+                color='blue'
+                variant='transparent'
                 sx={{
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
@@ -173,7 +181,7 @@ export const PortfolioHero = (props: Header142Props) => {
           </div>
         </div>
       </div>
-      <motion.div className="absolute size-full" style={canvasTransform}>
+      {/* <motion.div className="absolute size-full" style={canvasTransform}>
         {renderImages(
           group1Images,
           imagePositions.group1,
@@ -192,7 +200,7 @@ export const PortfolioHero = (props: Header142Props) => {
           group3Transform,
           "blur(15px)"
         )}
-      </motion.div>
+      </motion.div> */}
     </section>
   );
 };
@@ -200,7 +208,7 @@ export const PortfolioHero = (props: Header142Props) => {
 export const Header142Defaults: Header142Props = {
   heading: "Medium length hero heading goes here",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    "Explore how we’ve transformed ideas into successful digital solutions for clients across industries. Each case study highlights our approach, methodology and the value delivered to our clients.",
   buttons: [{ title: "Button" }, { title: "Button", variant: "secondary" }],
   group1Images: [
     { src: "https://via.placeholder.com/150", alt: "Group 1 - Image 1" },

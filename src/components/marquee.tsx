@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import Mendix from "../assets/images/mendix.svg";
 import OutSystems from "../assets/images/outsystem.svg";
@@ -45,23 +47,25 @@ const Marquee: React.FC = () => {
   ];
 
   return (
-    <div className="w-full mb-6">
-      <h1 className="text-center text-2xl font-bold mb-6">More Platforms</h1>
+    <div className='w-full mb-6'>
+      <h1 className='text-center text-2xl font-extrabold mb-6'>
+        More Platforms
+      </h1>
 
-      <div className="relative overflow-hidden p-10 h-16 flex items-center">
+      <div className='relative overflow-hidden p-10 h-16 flex items-center'>
         {/* Left Blur */}
-        <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10" />
+        <div className='absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-white via-white to-transparent pointer-events-none z-10' />
 
         {/* Right Blur */}
-        <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10" />
+        <div className='absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-white via-white to-transparent pointer-events-none z-10' />
 
         {/* Marquee */}
-        <div className="flex whitespace-nowrap animate-marquee">
+        <div className='flex whitespace-nowrap animate-marquee'>
           {/* Duplicate companies multiple times to ensure continuous scrolling */}
           {companies.map((company, index) => (
             <img
               key={index}
-              className="mx-6 w-auto h-12 object-contain"
+              className='mx-6 w-auto h-12 object-contain'
               src={company}
               alt={`Company logo ${index}`}
             />

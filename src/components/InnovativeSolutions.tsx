@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { useState } from "react";
@@ -59,11 +61,14 @@ export const InnovativeSolutions = (props: Layout351Props) => {
   };
 
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="rb-12 mb-12 text-center w-full  md:mb-18 lg:mb-20">
+    <section
+      id='relume'
+      className='px-[5%] bg-[#EFF6FF] py-16 md:py-24 lg:py-28'
+    >
+      <div className='container'>
+        <div className='rb-12 mb-12 text-center w-full  md:mb-18 lg:mb-20'>
           <h5
-            className="mb-1 font-thin "
+            className='mb-1 font-thin '
             style={{
               background: colors.themeGradient,
               WebkitBackgroundClip: "text",
@@ -72,10 +77,10 @@ export const InnovativeSolutions = (props: Layout351Props) => {
           >
             Innovative Development Solutions
           </h5>
-          <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+          <h2 className='rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl'>
             Transform Your Ideas
             <span
-              className=" ml-2"
+              className=' ml-2'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -85,9 +90,9 @@ export const InnovativeSolutions = (props: Layout351Props) => {
               Into Reality
             </span>
           </h2>
-          <p className="md:text-md text-gray-500">{description}</p>
+          <p className='md:text-md text-gray-500'>{description}</p>
         </div>
-        <div className="flex w-full flex-col overflow-hidden rounded-xl border-b border-l border-r border-gray-300 lg:h-[90vh] lg:flex-row lg:border-r-0 lg:border-t">
+        <div className='flex w-full flex-col overflow-hidden rounded-xl border-b border-l border-r border-gray-300 lg:h-[90vh] lg:flex-row lg:border-r-0 lg:border-t'>
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -111,7 +116,7 @@ const FeatureCard = ({
   const CardContent = isMobile ? motion.div : "div";
   return (
     <motion.div
-      className="flex flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row "
+      className='flex  flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row '
       style={{
         boxShadow:
           "25px 0px 30px 0px rgba(197, 197, 197, 0.25), 12px 0px 20px -10px rgba(0, 0, 0, 0.15)",
@@ -123,26 +128,26 @@ const FeatureCard = ({
       }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
     >
-      <div className="relative flex h-16 w-full min-w-full cursor-pointer items-center justify-center border-t border-border-primary py-8 md:h-20 lg:h-[90vh] lg:w-20 lg:min-w-20 lg:flex-col lg:justify-between lg:border-none">
-        <p className="text-blue-300 absolute left-6 whitespace-nowrap text-xl font-bold md:left-10 md:text-2xl lg:relative lg:left-0">
+      <div className='relative  flex h-16 w-full min-w-full cursor-pointer items-center justify-center border-t border-border-primary py-8 md:h-20 lg:h-[90vh] lg:w-20 lg:min-w-20 lg:flex-col lg:justify-between lg:border-none'>
+        <p className='text-blue-300 absolute left-6 whitespace-nowrap text-xl font-bold md:left-10 md:text-2xl lg:relative lg:left-0'>
           {feature.columnText}
         </p>
-        <h2 className="hidden text-gray-300 [writing-mode:vertical-rl] lg:mx-auto lg:block lg:rotate-180 lg:text-2xl lg:font-bold">
+        <h2 className='hidden text-gray-300 [writing-mode:vertical-rl] lg:mx-auto lg:block lg:rotate-180 lg:text-2xl lg:font-bold'>
           {feature.verticalText}
         </h2>
-        <p className="text-xl font-bold md:text-2xl lg:hidden ">
+        <p className='text-xl font-bold md:text-2xl lg:hidden '>
           {feature.horizontalText}
         </p>
       </div>
       <CardContent
-        className="w-full overflow-hidden lg:h-full lg:w-auto lg:min-w-[200vw] lg:overflow-auto"
+        className='w-full overflow-hidden lg:h-full lg:w-auto lg:min-w-[200vw] lg:overflow-auto'
         initial={false}
         animate={{
           height: isActive ? "auto" : "0px",
         }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <div className="flex h-full flex-col px-6 pb-8 pt-4 md:px-10 md:pb-12 md:pt-12 lg:w-[40rem] lg:px-12 lg:pb-16 lg:pt-16">
+        <div className='flex h-full flex-col px-6 pb-8 pt-4 md:px-10 md:pb-12 md:pt-12 lg:w-[40rem] lg:px-12 lg:pb-16 lg:pt-16'>
           {/* <h3
             dangerouslySetInnerHTML={{ __html: feature.heading }}
             className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl"
@@ -150,15 +155,15 @@ const FeatureCard = ({
             {feature.heading}
           </h3> */}
           <h1
-            className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl"
+            className='mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl'
             dangerouslySetInnerHTML={{ __html: feature.heading }}
           />
-          <p className="md:text-sm text-gray-600">{feature.description}</p>
-          <div className="rt-8 mt-8 h-80 md:mt-10 md:h-[25rem] lg:mt-12">
+          <p className='md:text-sm text-gray-600'>{feature.description}</p>
+          <div className='rt-8 mt-8 h-80 md:mt-10 md:h-[25rem] lg:mt-12'>
             <img
               src={feature.image.src}
               alt={feature.image.alt}
-              className="size-full object-cover"
+              className='size-full object-cover'
             />
           </div>
         </div>

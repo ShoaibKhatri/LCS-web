@@ -1,3 +1,5 @@
+/** @format */
+
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { colors } from "../constants/theme";
@@ -51,11 +53,11 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
   const isAllVisible = visibleCount >= projects.length;
 
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50">
-      <div className="container">
-        <header className="mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20">
+    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50'>
+      <div className='container'>
+        <header className='mx-auto mb-12 max-w-lg text-center md:mb-18 lg:mb-20'>
           <p
-            className="mb-3 font-semibold md:mb-4"
+            className='mb-3 font-semibold md:mb-4'
             style={{
               background: colors.themeGradient,
               WebkitBackgroundClip: "text",
@@ -64,10 +66,10 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
           >
             {tagline}
           </p>
-          <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+          <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
             Case
             <span
-              className=" ml-2"
+              className=' ml-2'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -77,9 +79,9 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
               Studies
             </span>
           </h2>
-          <p className="md:text-md text-gray-500">{description}</p>
+          <p className='md:text-md text-gray-500'>{description}</p>
         </header>
-        <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:gap-x-12">
+        <div className='grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2 md:gap-y-16 lg:gap-x-12'>
           {location.pathname === "/portfolio"
             ? projects
                 .slice(0, visibleCount)
@@ -88,10 +90,10 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
                 <Project key={index} {...project} />
               ))}
         </div>
-        <footer className="mt-12 flex justify-center md:mt-18 lg:mt-20">
+        <footer className='mt-12 flex justify-center md:mt-18 lg:mt-20'>
           {!isAllVisible && location.pathname === "/portfolio" ? (
             <Button
-              className=" p-3 bg-transparent border  rounded-xl border-blue-500"
+              className=' p-3 bg-transparent border  rounded-xl border-blue-500'
               style={{
                 background: colors.themeGradient, // Gradient background
                 WebkitBackgroundClip: "text",
@@ -102,8 +104,8 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
               View More
               <img
                 src={viewMore}
-                className="size-5 inline-block ml-2 "
-                alt=""
+                className='size-5 inline-block ml-2 '
+                alt=''
               />
             </Button>
           ) : (
@@ -111,9 +113,9 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
           )}
 
           {isAllVisible && location.pathname === "/portfolio" ? (
-            <div className="mt-8 text-center ">
+            <div className='mt-8 text-center '>
               <Button
-                className="p-3 bg-transparent border  rounded-xl border-blue-500"
+                className='p-3 bg-transparent border  rounded-xl border-blue-500'
                 style={{
                   background: colors.themeGradient, // Gradient background
                   WebkitBackgroundClip: "text",
@@ -124,8 +126,8 @@ export const FeaturedProjects = (props: Portfolio5Props) => {
                 View All
                 <img
                   src={viewMore}
-                  className="size-5 inline-block ml-2 -rotate-90"
-                  alt=""
+                  className='size-5 inline-block ml-2 -rotate-90'
+                  alt=''
                 />
               </Button>
             </div>
@@ -148,25 +150,25 @@ const Project: React.FC<ProjectProps> = ({
   tags,
 }) => (
   <article>
-    <div className="mb-5 md:mb-6">
+    <div className='mb-5 md:mb-6'>
       <a href={url}>
         <img
           src={image.src}
-          className="w-full object-cover rounded-2xl"
+          className='w-full object-cover rounded-2xl'
           alt={image.alt}
         />
       </a>
     </div>
-    <h3 className="mb-2 text-xl font-bold md:text-2xl">
+    <h3 className='mb-2 text-xl font-bold md:text-2xl'>
       <a href={url}>{title}</a>
     </h3>
     <p>{description}</p>
-    <ul className="mt-3 flex flex-wrap gap-2 md:mt-4">
+    <ul className='mt-3 flex flex-wrap gap-2 md:mt-4'>
       {tags.map((tag, index) => (
-        <li key={index} className="flex">
+        <li key={index} className='flex'>
           <a
             href={tag.url}
-            className="bg-background-secondary px-2 py-1 text-sm font-semibold"
+            className='bg-background-secondary px-2 py-1 text-sm font-semibold'
           >
             {tag.label}
           </a>
@@ -176,7 +178,7 @@ const Project: React.FC<ProjectProps> = ({
     <Button
       {...button}
       asChild
-      className="mt-5 md:mt-6"
+      className='mt-5 md:mt-6'
       style={{
         background: colors.themeGradient, // Gradient background
         WebkitBackgroundClip: "text",

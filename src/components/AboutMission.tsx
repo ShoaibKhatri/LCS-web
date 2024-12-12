@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
 import { colors } from "../constants/theme";
@@ -34,9 +36,9 @@ export const AboutMission = (props: Layout192Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50">
-      <div className="container">
-        <div className="mx-auto mb-12 w-full  text-center md:mb-18 lg:mb-20">
+    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50'>
+      <div className='container'>
+        <div className='mx-auto mb-12 w-full  text-center md:mb-18 lg:mb-20'>
           <p
             className={`mb-3 font-semibold md:mb-4 `}
             style={{
@@ -48,7 +50,7 @@ export const AboutMission = (props: Layout192Props) => {
           >
             Our Mission & Values
           </p>
-          <h1 className="mb-5 mr-2 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+          <h1 className='mb-5 mr-2 text-5xl font-extrabold md:mb-6 md:text-7xl lg:text-8xl'>
             Guiding Principles for{" "}
             <span
               className={` ml-2 `}
@@ -62,24 +64,24 @@ export const AboutMission = (props: Layout192Props) => {
               Success
             </span>
           </h1>
-          <p className="md:text-sm ">{description}</p>
+          <p className='md:text-sm '>{description}</p>
         </div>
-        <div className="grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 lg:gap-y-16">
+        <div className='grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2 lg:gap-y-16'>
           {featureSections.map((feature, index) => (
             <div
               key={index}
-              className="grid grid-cols-1 gap-y-16  md:grid-cols-2 md:items-center md:gap-x-6 lg:gap-x-8"
+              className='grid grid-cols-1 gap-y-16  md:grid-cols-2 md:items-center md:gap-x-6 lg:gap-x-8'
             >
-              <div className="order-2 md:order-1">
+              <div className='order-2 md:order-1'>
                 <img
                   src={feature.icon?.src}
-                  className="w-full h-[200px] rounded-md object-cover"
+                  className='w-full h-[200px] rounded-md object-cover'
                   alt={image.alt}
                 />
               </div>
-              <div className="order-1 lg:order-2">
+              <div className='order-1 lg:order-2'>
                 <h5
-                  className="mb-3 font-semibold text-[24px] md:mb-4"
+                  className='mb-3 font-semibold text-[24px] md:mb-4'
                   style={{
                     background: colors.themeGradient,
                     WebkitBackgroundClip: "text",
@@ -89,7 +91,7 @@ export const AboutMission = (props: Layout192Props) => {
                 >
                   {feature.title}
                 </h5>
-                <p className="md:text-sm">{feature.description}</p>
+                <p className='md:text-sm'>{feature.description}</p>
                 {/* <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
                   {buttons.map((button, index) => (
                     <Button key={index} {...button}>

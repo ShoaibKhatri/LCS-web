@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import Mendix from "../assets/images/mendix.svg";
 import OutSystems from "../assets/images/outsystem.svg";
@@ -30,11 +32,11 @@ export const PlatForms = (props: Layout228Props) => {
   return (
     <>
       <section
-        id="relume"
-        className="px-[13%] mobile:px-[6%] py-16 md:py-24 lg:py-28"
+        id='relume'
+        className='px-[13%]  mobile:px-[6%] py-16 md:py-24 lg:py-28'
       >
-        <div className="container">
-          <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+        <div className='container'>
+          <div className='mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20'>
             <p
               className={`mb-3 font-semibold md:mb-4 `}
               style={{
@@ -46,7 +48,7 @@ export const PlatForms = (props: Layout228Props) => {
             >
               Low code platforms
             </p>
-            <h1 className="mb-5 mr-2 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
+            <h1 className='mb-5 mr-2 text-5xl font-extrabold md:mb-6 md:text-7xl lg:text-8xl'>
               Platforms We Use for{" "}
               <span
                 className={` ml-2 `}
@@ -60,34 +62,34 @@ export const PlatForms = (props: Layout228Props) => {
                 Low Code
               </span>
             </h1>
-            <p className="md:text-sm ">
+            <p className='md:text-sm '>
               Utilizing cutting-edge low code platforms to deliver agile,
               efficient and scalable solutions tailored to your needs.
             </p>
           </div>
-          <div className="grid grid-cols-1  items-start justify-center gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-4 lg:gap-x-4">
+          <div className='grid grid-cols-1  items-start justify-center gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-4 lg:gap-x-4'>
             {sections.map((section, index) => (
-              <a href={section.link} target="_blank" rel="noreferrer">
+              <a href={section.link} target='_blank' rel='noreferrer'>
                 <div
                   key={index}
-                  className="relative h-[165px] w-full hover:bg-platformColorBg hover:border-gray-100 border border-gray-200 bg-blue-50 p-5 hover:p-0 rounded-2xl flex items-center text-center transition-all duration-300 ease-in-out hover:flex-col hover:cursor-pointer hover group"
+                  className='relative h-[165px] w-full hover:bg-platformColorBg hover:border-gray-100 border border-gray-200 bg-blue-50 p-5 hover:p-0 rounded-2xl flex items-center text-center transition-all duration-300 ease-in-out hover:flex-col hover:cursor-pointer hover group'
                 >
                   {/* Logo Image */}
-                  <div className="absolute top-1/2 left-1/2 transform p-0 -translate-x-1/2 -translate-y-1/2  transition-all duration-300 ease-in-out group-hover:w-1/2 group-hover:h-16 group-hover:top-2 group-hover:left-1 group-hover:translate-x-0 group-hover:translate-y-0">
+                  <div className='absolute top-1/2 left-1/2 transform p-0 -translate-x-1/2 -translate-y-1/2  transition-all duration-300 ease-in-out group-hover:w-1/2 group-hover:h-16 group-hover:top-2 group-hover:left-1 group-hover:translate-x-0 group-hover:translate-y-0'>
                     <img
                       src={section.image.src}
                       alt={section.image.alt}
-                      className="w-full h-full object-contain"
+                      className='w-full h-full object-contain'
                     />
                   </div>
                   <img
                     src={Icon}
-                    className="size-5 opacity-0 absolute right-3 top-7 group-hover:opacity-100"
-                    alt=""
+                    className='size-5 opacity-0 absolute right-3 top-7 group-hover:opacity-100'
+                    alt=''
                   />
 
                   {/* Heading / Description */}
-                  <h3 className="absolute bottom-4 left-5 w-[calc(100%-10px)] transform translate-y-0 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 text-left text-md text-gray-500 md:text-md md:leading-[1.3] lg:text-[16px]">
+                  <h3 className='absolute bottom-4 left-5 w-[calc(100%-10px)] transform translate-y-0 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100 text-left text-md text-gray-500 md:text-md md:leading-[1.3] lg:text-[16px]'>
                     {section.description}
                   </h3>
                 </div>

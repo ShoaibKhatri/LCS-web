@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useEffect, useState } from "react";
 import { Steps, Button } from "antd";
 import PlaceholderImage from "../assets/images/PlaceholderImage.svg";
@@ -100,7 +102,7 @@ const Stepper = () => {
     };
     // Attach event listener
     window.addEventListener("resize", handleResize);
-    if (width <= 1024) {
+    if (width <= 1200) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
@@ -113,8 +115,8 @@ const Stepper = () => {
   }, [width]);
 
   return (
-    <div className="z-20 relative">
-      <div className="w-full mx-auto ">
+    <div className='z-20 relative'>
+      <div className='w-full mx-auto '>
         <Steps
           progressDot
           current={current}
@@ -125,22 +127,23 @@ const Stepper = () => {
           ))}
         </Steps>
 
-        <div className="flex flex-col flex-1 my-10  md:flex-row items-center md:justify-between justify-around w-full lg:h-dvh ">
+        <div className='flex flex-col flex-1 my-10  md:flex-row items-center md:justify-between justify-around w-full lg:h-[80vh] '>
           {/* <!-- Left Column --> */}
-          <div className="w-full md:w-1/2 p-8 flex flex-col justify-center items-start space-y-4">
-            <h1 className="text-xl md:text-8xl font-bold text-gray-200">
+          <div className='w-full md:w-1/2 p-8 flex flex-col justify-center items-start space-y-4'>
+            <h1 className='text-xl md:text-8xl font-bold text-gray-200'>
               {steps[current].title}
             </h1>
-            <h1 className="text-xl md:text-2xl font-bold text-gray-800">
+            <h1 className='text-xl md:text-2xl font-bold text-gray-800'>
               {steps[current].heading}
             </h1>
-            <p className="text-gray-600 text-md">
+            <p className='text-gray-600 text-md'>
               {steps[current].description}
             </p>
-            <div className="flex space-x-4 mt-4">
+            <div className='flex space-x-4  mt-4'>
               {current > 0 && (
                 <Button
-                  className="py-5 border border-gradient-to-r from-[#3B82F6] to-[#114FD7] "
+                  // style={{height:4}}
+                  className=' w-[100px] !h-[42px] border border-gradient-to-r from-[#3B82F6] to-[#114FD7] '
                   onClick={prev}
                 >
                   Previous
@@ -152,12 +155,12 @@ const Stepper = () => {
                   background: colors.themeGradient,
                   color: "#F9FAFB",
                 }}
-                className="text-gray-50 py-5"
+                className='text-gray-50  w-[100px] !h-[42px] '
                 onClick={current === steps.length - 1 ? finish : next}
               >
                 {current === steps.length - 1 ? "Contact Us " : "Next"}
                 {current === steps.length - 1 ? (
-                  <img src={Arrow} className="" alt="" />
+                  <img src={Arrow} className='' alt='' />
                 ) : (
                   ""
                 )}
@@ -167,11 +170,11 @@ const Stepper = () => {
 
           {/* <!-- Right Column --> */}
 
-          <div className="w-full md:w-1/2 h-64 lg:h-full">
+          <div className='w-full md:w-1/2 h-64 md:h-full'>
             <img
               src={steps[current].img}
-              alt="Placeholder "
-              className="w-full md:h-full mobile:h-full object-cover  rounded-xl"
+              alt='Placeholder '
+              className='size-full object-cover  rounded-xl'
             />
           </div>
         </div>

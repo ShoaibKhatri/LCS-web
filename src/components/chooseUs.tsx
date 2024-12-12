@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
 import ChartLineUp from "../assets/images/ChartLineUp.svg";
@@ -42,28 +44,28 @@ export const ChooseUs = (props: Layout396Props) => {
       style={{
         background: "linear-gradient(90deg, #3B82F6 0%, #114FD7 100%)",
       }}
-      id="relume"
-      className="relative lg:px-[13%] py-16 px-10 md:py-24 lg:py-28"
+      id='relume'
+      className='relative lg:px-[13%] py-16 px-10 md:py-24 lg:py-28'
     >
       <img
-        className="hidden md:block absolute left-1 top-1 "
+        className='hidden md:block absolute left-1 top-1 '
         src={TopLeftWhy}
-        alt=""
+        alt=''
       />
       <img
-        className="hidden md:block absolute bottom-30 right-1 w-[250px] h-[250px]"
+        className='hidden md:block absolute bottom-30 right-1 w-[250px] h-[250px]'
         src={BottomRightWhy}
-        alt=""
+        alt=''
       />
-      <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 font-semibold md:mb-4 text-white">{tagline}</p>
-          <h1 className="mb-5 text-5xl text-white font-bold md:mb-6 md:text-7xl lg:text-8xl">
+      <div className='container'>
+        <div className='mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20'>
+          <p className='mb-3 font-semibold md:mb-4 text-white'>{tagline}</p>
+          <h1 className='mb-5 text-5xl text-white font-extrabold md:mb-6 md:text-7xl lg:text-8xl'>
             {heading}
           </h1>
-          <p className="md:text-md text-white">{description}</p>
+          <p className='md:text-md text-white'>{description}</p>
         </div>
-        <div className="relative grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
+        <div className='relative grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3'>
           {featureSections.map((feature, index) => (
             <FeatureSection key={index} {...feature} />
           ))}
@@ -75,26 +77,26 @@ export const ChooseUs = (props: Layout396Props) => {
 
 const FeatureSection = (featureSection: FeatureSection) => (
   <div
-    className="shadow-custom hover:cursor-pointer hover:shadow-hover transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col justify-center rounded-[20px] border-border-primary p-6 md:p-8"
+    className='shadow-custom hover:cursor-pointer hover:shadow-hover transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col justify-center rounded-[20px] border-border-primary p-6 md:p-8'
     style={{
       background: "linear-gradient(73.88deg, #EFF6FF 0.01%, #BFDBF5 99.88%)",
     }}
   >
     <div>
-      <div className="rb-5 mb-5 md:mb-6">
+      <div className='rb-5 mb-5 md:mb-6'>
         <img
           src={featureSection.icon.src}
-          className="size-12"
+          className='size-12'
           alt={featureSection.icon.alt}
         />
       </div>
       <h2
-        className="mb-3 font-bold md:mb-4 md:text-md md:leading-[1.3] lg:text-[16px]"
+        className='mb-3 font-bold md:mb-4 md:text-md md:leading-[1.3] lg:text-[16px]'
         style={featureSection.sx}
       >
         {featureSection.heading}
       </h2>
-      <p className="text-gray-600">{featureSection.description}</p>
+      <p className='text-gray-600'>{featureSection.description}</p>
     </div>
     {/* <div className="mt-5 md:mt-6">
       <Button {...featureSection.button}>{featureSection.button.title}</Button>

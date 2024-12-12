@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState } from "react";
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
@@ -53,71 +55,71 @@ export const Industries = (props: Layout396Props) => {
 
   return (
     <section
-      id="relume"
-      className="relative px-[5%] py-16 md:py-24 lg:py-28"
+      id='relume'
+      className='relative px-[5%] py-16 md:py-24 lg:py-28'
       style={{
         background: colors.themeGradient,
       }}
     >
       <img
         src={Vector1}
-        className="lg:block hidden absolute left-[-100px] top-[10%] opacity-30 "
-        alt=""
+        className='lg:block hidden absolute left-[-100px] top-[10%] opacity-30 '
+        alt=''
       />
       <img
         src={Vector3}
-        className="lg:block hidden absolute left-[60%] bottom-0 opacity-20 "
-        alt=""
+        className='lg:block hidden absolute left-[60%] bottom-0 opacity-20 '
+        alt=''
       />
       <img
         src={Vector2}
-        className="lg:block hidden absolute right-0 top-0 opacity-20 size-1/4 "
-        alt=""
+        className='lg:block hidden absolute right-0 top-0 opacity-20 size-1/4 '
+        alt=''
       />
-      <div className="container flex flex-col items-center">
-        <div className="mx-4 mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
-          <p className="mb-3 text-[16px] leading-4 font-semibold md:mb-4 text-blue-200">
+      <div className='container flex flex-col items-center'>
+        <div className='mx-4 mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20'>
+          <p className='mb-3 text-[16px] leading-4 font-semibold md:mb-4 text-blue-200'>
             {tagline}
           </p>
-          <h1 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl text-blue-50 lg:text-8xl">
+          <h1 className='mb-5 text-5xl font-extrabold md:mb-6 md:text-7xl text-blue-50 lg:text-8xl'>
             {heading}
           </h1>
-          <p className="md:text-[16px] leading-6 text-blue-200">
+          <p className='md:text-[16px] leading-6 text-blue-200'>
             {description}
           </p>
         </div>
-        <div className="grid auto-cols-fr items-start grid-cols-1 gap-6 md:gap-8 lg:grid-cols-4">
+        <div className='grid auto-cols-fr items-start grid-cols-1 gap-6 md:gap-8 lg:grid-cols-4'>
           {/* Render only visible cards */}
           {data?.slice(0, visibleCount).map((feature: any, index: number) => (
             <FeatureSection key={index} {...feature} />
           ))}
         </div>
         {!isAllVisible && data?.length > 0 && (
-          <div className="mt-8 text-center ">
+          <div className='mt-8 text-center '>
             <Button
-              className="text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl"
+              className='text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl'
               onClick={handleViewMore}
             >
               View More
               <img
                 src={viewMore}
-                className="size-5 ml-2 inline-block "
-                alt=""
+                className='size-5 ml-2 inline-block '
+                alt=''
               />
             </Button>
           </div>
         )}
         {isAllVisible && (
-          <div className="mt-8 text-center ">
+          <div className='mt-8 text-center '>
             <Button
               onClick={() => navigate("/industries")}
-              className="text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl"
+              className='text-blue-50 p-3 bg-transparent border border-blue-50 rounded-xl'
             >
               View All
               <img
                 src={viewMore}
-                className="size-5 inline-block ml-2 -rotate-90"
-                alt=""
+                className='size-5 inline-block ml-2 -rotate-90'
+                alt=''
               />
             </Button>
           </div>
@@ -128,28 +130,28 @@ export const Industries = (props: Layout396Props) => {
 };
 
 const FeatureSection = (featureSection: any) => (
-  <div className="flex flex-col  justify-center bg-transparent p-6 md:p-8">
+  <div className='flex flex-col  justify-center bg-transparent p-6 md:p-8'>
     <div>
-      <div className="rb-5 mb-5 md:mb-6">
+      <div className='rb-5 mb-5 md:mb-6'>
         <img
-          src={`http://192.168.1.11:8000${featureSection?.image}`}
-          className="w-full rounded-md"
-          alt=""
+          src={`https://aliasgarkachwala.pythonanywhere.com/${featureSection?.image}`}
+          className='w-full rounded-md'
+          alt=''
         />
       </div>
-      <h2 className="mb-3 text-xl text-blue-50 font-bold md:mb-4 md:text-xl md:leading-[1.3] lg:text-xl">
+      <h2 className='mb-3 text-xl text-blue-50 font-bold md:mb-4 md:text-xl md:leading-[1.3] lg:text-xl'>
         {featureSection?.name}
       </h2>
-      <p className="text-blue-200 text-[16px] line-clamp-2 md:line-clamp-3">
+      <p className='text-blue-200 text-[16px] line-clamp-2 md:line-clamp-3'>
         {featureSection?.description}
       </p>
     </div>
-    <div className="mt-5 md:mt-6 text-blue-50">
-      <Link to="/industries">
+    <div className='mt-5 md:mt-6 text-blue-50'>
+      <Link to='/industries'>
         <Button
-          className="text-blue-50"
-          variant="link"
-          size="link"
+          className='text-blue-50'
+          variant='link'
+          size='link'
           iconRight={<RxChevronRight />}
         >
           Learn more
