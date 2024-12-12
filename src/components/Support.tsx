@@ -57,14 +57,10 @@ const Card = (card: Card) => {
     <div className="flex flex-col border border-border-primary">
       <div className="flex flex-1 flex-col justify-center p-6">
         <div>
-          <p className="mb-2 text-sm font-semibold">{card.tagline}</p>
-          <h3 className="mb-2 text-lg font-bold leading-[1.4] md:text-2xl">
+          <h3 className="mb-2 text-lg font-bold leading-[1.4] md:text-2xl leading-6">
             {card.heading}
           </h3>
-          <p>{card.description}</p>
-        </div>
-        <div className="mt-5 md:mt-6">
-          <Button {...card.button}>{card.button.title}</Button>
+          <p className="text-gray-500">{card.description}</p>
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-center self-start">
@@ -85,8 +81,9 @@ export const Layout399Defaults: Props = {
         src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
         alt: "Relume placeholder image 1",
       },
-      heading: "Medium length section heading goes here",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      heading: "Transparent Hiring Process",
+      description:
+        "We implement thorough screening procedures to find the ideal talent or your project.",
       button: {
         title: "Button",
         variant: "link",
@@ -100,8 +97,9 @@ export const Layout399Defaults: Props = {
         src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
         alt: "Relume placeholder image 2",
       },
-      heading: "Medium length section heading goes here",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      heading: "Seamless Onboarding  Experience",
+      description:
+        "Our comprehensive onboarding process ensures a smooth transition for new team members.",
       button: {
         title: "Button",
         variant: "link",
@@ -115,8 +113,9 @@ export const Layout399Defaults: Props = {
         src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
         alt: "Relume placeholder image 3",
       },
-      heading: "Medium length section heading goes here",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      heading: "Performance Monitoring",
+      description:
+        "We utilize tools like Trello and Monday.com to track progress and identify areas for improvement.",
       button: {
         title: "Button",
         variant: "link",
@@ -130,8 +129,9 @@ export const Layout399Defaults: Props = {
         src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
         alt: "Relume placeholder image 4",
       },
-      heading: "Medium length section heading goes here",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      heading: "Regular Feedback & Alignment",
+      description:
+        "We prioritize open communication and regular feedback sessions to ensure goals are met.",
       button: {
         title: "Button",
         variant: "link",

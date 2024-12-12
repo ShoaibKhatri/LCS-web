@@ -111,7 +111,7 @@ const FeatureCard = ({
   const CardContent = isMobile ? motion.div : "div";
   return (
     <motion.div
-      className="flex flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row "
+      className="flex flex-col rounded-xl justify-start overflow-hidden lg:h-[90vh] lg:min-w-20 lg:flex-row border border-r-2 border-r-gray-200"
       style={{
         boxShadow:
           "25px 0px 30px 0px rgba(197, 197, 197, 0.25), 12px 0px 20px -10px rgba(0, 0, 0, 0.15)",

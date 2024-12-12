@@ -93,7 +93,7 @@ export const AboutHero = (props: Header129Props) => {
               </h2>
             )}
 
-            <p className="md:text-md">{description}</p>
+            <p className="md:text-md text-gray-500">{description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
               <PrimaryBtn variant="primary">
                 Get Started
