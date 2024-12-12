@@ -77,7 +77,7 @@ export const InnovativeSolutions = (props: Layout351Props) => {
           >
             Innovative Development Solutions
           </h5>
-          <h2 className='rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl'>
+          <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
             Transform Your Ideas
             <span
               className=' ml-2'
