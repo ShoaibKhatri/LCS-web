@@ -1,3 +1,5 @@
+/** @format */
+
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { LuMapPin } from "react-icons/lu";
@@ -37,13 +39,13 @@ export const JobOpenings = (props: Career11Props) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50">
-      <div className="container ">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 md:gap-16">
+    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50'>
+      <div className='container '>
+        <div className='grid grid-cols-1 gap-12 lg:grid-cols-2 md:gap-16'>
           {/* First Column */}
-          <div className="lg:sticky lg:top-20 self-start">
+          <div className='lg:sticky lg:top-20 self-start'>
             <h5
-              className="mb-1 font-thin"
+              className='mb-1 font-thin'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -52,10 +54,10 @@ export const JobOpenings = (props: Career11Props) => {
             >
               {tagline}
             </h5>
-            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+            <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
               We’re Looking for
               <span
-                className="ml-2 block"
+                className='ml-2 block'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -65,7 +67,7 @@ export const JobOpenings = (props: Career11Props) => {
                 Talent
               </span>
             </h2>
-            <p className="md:text-md text-gray-500">{description}</p>
+            <p className='md:text-md text-gray-500'>{description}</p>
           </div>
 
           {/* Second Column */}
@@ -82,11 +84,11 @@ export const JobOpenings = (props: Career11Props) => {
 
 const PositionCard: React.FC<PositionCardProps> = ({ position }) => {
   return (
-    <div className="border-none bg-brand-white rounded-xl p-6 md:py-8 m-6">
-      <div className="mb-3 flex items-center justify-between gap-4 md:mb-4">
+    <div className='border-none bg-brand-white rounded-xl p-6 md:py-8 m-6'>
+      <div className='mb-3 flex items-center justify-between gap-4 md:mb-4'>
         <a href={position.url}>
           <h3
-            className="text-xl font-bold md:text-2xl"
+            className='text-xl font-bold md:text-2xl'
             style={{
               background: colors.themeGradient,
               WebkitBackgroundClip: "text",
@@ -96,38 +98,38 @@ const PositionCard: React.FC<PositionCardProps> = ({ position }) => {
             {position.title}
           </h3>
         </a>
-        <p className="bg-blue-50 text-gray-400 px-2 py-1 text-sm font-semibold">
+        <p className='bg-blue-50 text-gray-400 px-2 py-1 text-sm font-semibold'>
           {position.department}
         </p>
       </div>
-      <p className="mb-5 md:mb-6 text-gray-600">{position.description}</p>
-      <div className="flex flex-wrap gap-y-3">
-        <div className="mr-6 flex items-center">
-          <div className="mr-3 flex-none">
-            <LuMapPin className="flex size-6 flex-col items-center justify-center text-blue-600" />
+      <p className='mb-5 md:mb-6 text-gray-600'>{position.description}</p>
+      <div className='flex flex-wrap gap-y-3'>
+        <div className='mr-6 flex items-center'>
+          <div className='mr-3 flex-none'>
+            <LuMapPin className='flex size-6 flex-col items-center justify-center text-blue-600' />
           </div>
-          <span className="md:text-md">{position.location}</span>
+          <span className='md:text-md'>{position.location}</span>
         </div>
-        <div className="mr-6 flex items-center">
-          <div className="mr-3 flex-none">
-            <MdAccessTime className="flex size-6 flex-col items-center justify-center text-blue-600" />
+        <div className='mr-6 flex items-center'>
+          <div className='mr-3 flex-none'>
+            <MdAccessTime className='flex size-6 flex-col items-center justify-center text-blue-600' />
           </div>
-          <span className="md:text-md">{position.contractType}</span>
+          <span className='md:text-md'>{position.contractType}</span>
         </div>
-        <div className="mr-6 flex items-center">
-          <div className="mr-3 flex-none">
-            <PiSuitcaseSimpleBold className="flex size-6 flex-col items-center justify-center text-blue-600" />
+        <div className='mr-6 flex items-center'>
+          <div className='mr-3 flex-none'>
+            <PiSuitcaseSimpleBold className='flex size-6 flex-col items-center justify-center text-blue-600' />
           </div>
-          <span className="md:text-md">{position.experience}</span>
+          <span className='md:text-md'>{position.experience}</span>
         </div>
       </div>
-      <div className="mt-6 md:mt-8">
+      <div className='mt-6 md:mt-8'>
         {/* <Button {...position.button} asChild>
           <a href={position.url}>{position.button.title}</a>
         </Button> */}
         <SecondaryButton
-          color="blue"
-          variant="transparent"
+          color='blue'
+          variant='transparent'
           sx={{
             color: colors.blue500,
             border: `1px solid ${colors.blue500}`,

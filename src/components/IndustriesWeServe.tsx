@@ -91,7 +91,7 @@ export const IndustriesWeServe = (props: Layout6Props) => {
               >
                 Industries We Serve
               </p>
-              <h1 className='mb-5 mr-2 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl'>
+              <h1 className='mb-5 mr-2 text-5xl font-extrabold md:mb-6 md:text-7xl lg:text-8xl'>
                 Industries We{" "}
                 <span
                   className={` ml-2 `}

@@ -66,7 +66,7 @@ export const AboutHero = (props: Header129Props) => {
             >
               {title}
             </h5>
-            <p className="text-4xl !mb-0 font-semibold md:text-6xl lg:text-8xl">
+            <p className="text-4xl !mb-0 font-extrabold md:text-6xl lg:text-8xl">
               {title1}
               <span
                 className=" ml-2"

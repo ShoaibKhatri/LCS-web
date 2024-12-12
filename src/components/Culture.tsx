@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
 import ChartLineUp from "../assets/images/ChartLineUp.svg";
@@ -38,13 +40,13 @@ export const Culture = (props: Layout396Props) => {
   } as Props;
   return (
     <section
-      id="relume"
-      className="relative lg:px-[13%] py-16 px-10 md:py-24 lg:py-28"
+      id='relume'
+      className='relative lg:px-[13%] py-16 px-10 md:py-24 lg:py-28'
     >
-      <div className="container">
-        <div className="mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20">
+      <div className='container'>
+        <div className='mx-auto mb-12 w-full max-w-lg text-center md:mb-18 lg:mb-20'>
           <p
-            className="mb-3 font-semibold md:mb-4 "
+            className='mb-3 font-semibold md:mb-4 '
             style={{
               background: colors.themeGradient,
               WebkitBackgroundClip: "text",
@@ -53,10 +55,10 @@ export const Culture = (props: Layout396Props) => {
           >
             {tagline}
           </p>
-          <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+          <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
             What It’s Like to
             <span
-              className="ml-2"
+              className='ml-2'
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -66,9 +68,9 @@ export const Culture = (props: Layout396Props) => {
               Work Here
             </span>
           </h2>
-          <p className="md:text-md text-gray-500">{description}</p>
+          <p className='md:text-md text-gray-500'>{description}</p>
         </div>
-        <div className="relative grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3">
+        <div className='relative grid auto-cols-fr grid-cols-1 gap-6 md:gap-8 lg:grid-cols-3'>
           {featureSections.map((feature, index) => (
             <FeatureSection key={index} {...feature} />
           ))}
@@ -79,22 +81,22 @@ export const Culture = (props: Layout396Props) => {
 };
 
 const FeatureSection = (featureSection: FeatureSection) => (
-  <div className="shadow-whyUsShadow hover:cursor-pointer hover:shadow-hover transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col justify-center rounded-[20px] border-border-primary p-6 md:p-8">
+  <div className='shadow-whyUsShadow hover:cursor-pointer hover:shadow-hover transition-transform duration-300 ease-in-out hover:-translate-y-2 flex flex-col justify-center rounded-[20px] border-border-primary p-6 md:p-8'>
     <div>
-      <div className="rb-5 mb-5 md:mb-6">
+      <div className='rb-5 mb-5 md:mb-6'>
         <img
           src={featureSection.icon.src}
-          className="size-12"
+          className='size-12'
           alt={featureSection.icon.alt}
         />
       </div>
       <h2
-        className="mb-3 font-bold md:mb-4 md:text-md md:leading-[1.3] lg:text-[16px]"
+        className='mb-3 font-bold md:mb-4 md:text-md md:leading-[1.3] lg:text-[16px]'
         style={featureSection.sx}
       >
         {featureSection.heading}
       </h2>
-      <p className="text-gray-600">{featureSection.description}</p>
+      <p className='text-gray-600'>{featureSection.description}</p>
     </div>
   </div>
 );

@@ -1,3 +1,5 @@
+/** @format */
+
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
 import { colors } from "../constants/theme";
@@ -28,12 +30,12 @@ export type Layout242Props = React.ComponentPropsWithoutRef<"section"> &
 export const FullStackDev = (props: Layout242Props) => {
   const { sections } = { ...Layout242Defaults, ...props } as Props;
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="flex flex-col items-center ">
-          <div className="rb-12 mb-12 text-center w-full md:mb-18 lg:mb-20">
+    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28'>
+      <div className='container'>
+        <div className='flex flex-col items-center '>
+          <div className='rb-12 mb-12 text-center w-full md:mb-18 lg:mb-20'>
             <h5
-              className="mb-1 font-thin "
+              className='mb-1 font-thin '
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -42,10 +44,10 @@ export const FullStackDev = (props: Layout242Props) => {
             >
               Full-Stack Development
             </h5>
-            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+            <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
               End-to-End Development for
               <span
-                className=" ml-2"
+                className=' ml-2'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -55,25 +57,25 @@ export const FullStackDev = (props: Layout242Props) => {
                 Robust Solutions
               </span>
             </h2>
-            <p className="md:text-md text-gray-500">
+            <p className='md:text-md text-gray-500'>
               From backend to frontend, we handle the entire development stack
               for high-performance applications. Customized APIs and
               integrations. Scalable, high-performance architecture.
             </p>
           </div>
-          <div className="grid grid-cols-1 items-start gap-y-12 lg:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12">
+          <div className='grid grid-cols-1 items-start gap-y-12 lg:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12'>
             {sections.map((section, index) => (
-              <div key={index} className="md:flex ">
+              <div key={index} className='md:flex '>
                 {/* <div className=""> */}
                 <img
                   src={section.icon.src}
-                  className="size-14 mx-4"
+                  className='size-14 mx-4'
                   alt={section.icon.alt}
                 />
                 {/* </div> */}
-                <div className="">
+                <div className=''>
                   <h3
-                    className="mb-5 text-xl font-bold md:mb-6 md:text-2xl"
+                    className='mb-5 text-xl font-bold md:mb-6 md:text-2xl'
                     style={{
                       background: colors.themeGradient,
                       WebkitBackgroundClip: "text",
@@ -82,7 +84,7 @@ export const FullStackDev = (props: Layout242Props) => {
                   >
                     {section.heading}
                   </h3>
-                  <p className="mb-5 md:mb-6 text-[16px] text-gray-600">
+                  <p className='mb-5 md:mb-6 text-[16px] text-gray-600'>
                     {section.description}
                   </p>
                 </div>
