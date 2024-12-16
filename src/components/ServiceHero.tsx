@@ -82,7 +82,7 @@ export const ServiceHero = (props: Header136Props) => {
             </div> */}
 
             <div className="mt-6 flex justify-center gap-x-4 md:mt-8">
-              <PrimaryBtn variant="primary">
+              <PrimaryBtn variant="primary" path="/services">
                 Get Started
                 <img src={Arrow} className="inline-block ml-2 " alt="" />
               </PrimaryBtn>
@@ -93,6 +93,7 @@ export const ServiceHero = (props: Header136Props) => {
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path="/contact"
               >
                 Contact Us
               </SecondaryButton>

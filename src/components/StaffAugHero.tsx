@@ -72,7 +72,9 @@ export const StaffAugHero = (props: Header128Props) => {
                   {button.title}
                 </Button>
               ))} */}
-              <PrimaryBtn variant="primary">Hire Top IT Talent</PrimaryBtn>
+              <PrimaryBtn variant="primary" path="/contact">
+                Hire Top IT Talent
+              </PrimaryBtn>
             </div>
           </div>
           <div className="relative flex w-full">

@@ -27,12 +27,12 @@ export const Partnering = (props: Cta33Props) => {
     ...props,
   } as Props;
   return (
-    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28'>
-      <div className='container'>
-        <div className='mb-8 md:mb-10 lg:mb-12'>
-          <div className='mx-auto w-full text-center'>
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
+      <div className="container">
+        <div className="mb-8 md:mb-10 lg:mb-12">
+          <div className="mx-auto w-full text-center">
             <p
-              className='mb-3 text-[16px] leading-4 font-semibold md:mb-4 '
+              className="mb-3 text-[16px] leading-4 font-semibold md:mb-4 "
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -41,7 +41,7 @@ export const Partnering = (props: Cta33Props) => {
             >
               Ready to Transform Your Business?
             </p>
-            <h1 className='mb-5 mr-2 text-3xl font-extrabold md:mb-6 md:text-6xl lg:text-7xl'>
+            <h1 className="mb-5 mr-2 text-3xl font-extrabold md:mb-6 md:text-6xl lg:text-7xl">
               Partner with LCS And
               <span
                 className={` ml-2 `}
@@ -55,19 +55,20 @@ export const Partnering = (props: Cta33Props) => {
                 Unlock Your Full Potential
               </span>
             </h1>
-            <p className='md:text-md text-gray-500'>{description}</p>
-            <div className='mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8'>
-              <PrimaryBtn variant='primary'>
+            <p className="md:text-md text-gray-500">{description}</p>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8">
+              <PrimaryBtn variant="primary" path="services">
                 Learn More
-                <img src={Arrow} className='ml-2 inline-block' alt='' />
+                <img src={Arrow} className="ml-2 inline-block" alt="" />
               </PrimaryBtn>
               <SecondaryButton
-                variant='transparent'
-                color='blue'
+                variant="transparent"
+                color="blue"
                 sx={{
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path="/contact"
               >
                 Contact Us
               </SecondaryButton>
@@ -75,19 +76,19 @@ export const Partnering = (props: Cta33Props) => {
           </div>
         </div>
 
-        <div className='text-center mt-4'>
-          <p className='mb-3 text-[16px] leading-4 font-semibold md:mb-4'>
+        <div className="text-center mt-4">
+          <p className="mb-3 text-[16px] leading-4 font-semibold md:mb-4">
             Partnering with industry experts, we bring you the best resources
             and insights tailored to your needs.
           </p>
         </div>
-        <div className='flex flex-wrap items-center justify-center gap-x-8 gap-y-6 py-2'>
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 py-2">
           {logos.map((logo, index) => (
             <img
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className='max-h-12 md:max-h-14'
+              className="max-h-12 md:max-h-14"
             />
           ))}
         </div>

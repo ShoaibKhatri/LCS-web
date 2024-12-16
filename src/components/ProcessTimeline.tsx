@@ -39,14 +39,14 @@ export const ProcessTimeline = (props: Timeline20Props) => {
 
   return (
     <section
-      id='relume'
-      className='overflow-hidden px-[5%] py-16 md:py-24 lg:py-28'
+      id="relume"
+      className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28"
     >
-      <div className='container'>
-        <div className='mb-12 md:mb-18 lg:mb-20'>
-          <div className='w-full  text-center '>
+      <div className="container">
+        <div className="mb-12 md:mb-18 lg:mb-20">
+          <div className="w-full  text-center ">
             <h5
-              className='mb-1 font-thin text-center'
+              className="mb-1 font-thin text-center"
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -56,10 +56,10 @@ export const ProcessTimeline = (props: Timeline20Props) => {
               Our Process
             </h5>
 
-            <h1 className='mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl text-center'>
+            <h1 className="mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl text-center">
               How We Achieve
               <span
-                className='ml-3'
+                className="ml-3"
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -69,29 +69,30 @@ export const ProcessTimeline = (props: Timeline20Props) => {
                 Results
               </span>
             </h1>
-            <p className='md:text-md text-center'>{description}</p>
-            <div className='mt-6 flex gap-x-4 md:mt-8 items-center justify-center'>
-              <PrimaryBtn variant='primary'>
+            <p className="md:text-md text-center">{description}</p>
+            <div className="mt-6 flex gap-x-4 md:mt-8 items-center justify-center">
+              <PrimaryBtn variant="primary" path="/services">
                 Get Started
-                <img src={Arrow} className='inline-block ml-2 ' alt='' />
+                <img src={Arrow} className="inline-block ml-2 " alt="" />
               </PrimaryBtn>
               <SecondaryButton
-                color='blue'
-                variant='transparent'
+                color="blue"
+                variant="transparent"
                 sx={{
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path="/contact"
               >
                 Contact Us
               </SecondaryButton>
             </div>
           </div>
         </div>
-        <div className='relative grid auto-cols-fr grid-flow-row grid-cols-1 items-center justify-center md:grid-flow-col md:grid-cols-[max-content_1fr] md:justify-normal'>
-          <div className='relative hidden md:grid md:grid-cols-1 md:gap-4'>
-            <div className='flex flex-col items-center md:w-full md:flex-row'>
-              <div className='h-full w-[3px] bg-black md:h-[3px] md:w-full' />
+        <div className="relative grid auto-cols-fr grid-flow-row grid-cols-1 items-center justify-center md:grid-flow-col md:grid-cols-[max-content_1fr] md:justify-normal">
+          <div className="relative hidden md:grid md:grid-cols-1 md:gap-4">
+            <div className="flex flex-col items-center md:w-full md:flex-row">
+              <div className="h-full w-[3px] bg-black md:h-[3px] md:w-full" />
             </div>
           </div>
           <React.Fragment>
@@ -104,7 +105,7 @@ export const ProcessTimeline = (props: Timeline20Props) => {
               />
             ))}
           </React.Fragment>
-          <div className='absolute right-0 z-0 h-1 w-16 bg-gradient-to-r from-transparent to-white' />
+          <div className="absolute right-0 z-0 h-1 w-16 bg-gradient-to-r from-transparent to-white" />
         </div>
       </div>
     </section>
@@ -134,14 +135,14 @@ const TimelineItem = ({
           className
         )}
       >
-        <h3 className='mb-2 text-xl font-semibold md:text-xl'>{date}</h3>
-        <p className='text-[14px] text-gray-600'>{description}</p>
+        <h3 className="mb-2 text-xl font-semibold md:text-xl">{date}</h3>
+        <p className="text-[14px] text-gray-600">{description}</p>
       </div>
     </React.Fragment>
   );
 
   const LineComponent = () => (
-    <div className='flex flex-col items-center md:w-full md:flex-row'>
+    <div className="flex flex-col items-center md:w-full md:flex-row">
       <div
         className={clsx(
           "h-full w-[3px] bg-gray-200 md:h-[3px] md:w-full md:block",
@@ -150,7 +151,7 @@ const TimelineItem = ({
           }
         )}
       />
-      <div className='z-20 size-[0.9375rem] flex-none rounded-full bg-blue-500 shadow-[0_0_0_8px_white]' />
+      <div className="z-20 size-[0.9375rem] flex-none rounded-full bg-blue-500 shadow-[0_0_0_8px_white]" />
       <div
         className={clsx(
           "h-full w-[3px] bg-gray-200 md:h-[3px] md:w-full md:block",
@@ -163,13 +164,13 @@ const TimelineItem = ({
   );
 
   const SvgComponent = () => (
-    <div className='md:flex items-center justify-center hidden '>
-      <img className='size-12' src={img} alt='' />
+    <div className="md:flex items-center justify-center hidden ">
+      <img className="size-12" src={img} alt="" />
     </div>
   );
 
   return (
-    <div className='relative grid auto-cols-fr grid-cols-[max-content_1fr] gap-4 md:grid-cols-1 md:grid-rows-[1fr_max-content_1fr]'>
+    <div className="relative grid auto-cols-fr grid-cols-[max-content_1fr] gap-4 md:grid-cols-1 md:grid-rows-[1fr_max-content_1fr]">
       {isEven ? (
         <React.Fragment>
           {/* <div className="hidden md:block" /> */}
@@ -181,7 +182,7 @@ const TimelineItem = ({
         <React.Fragment>
           <SvgComponent />
           <LineComponent />
-          <ContentComponent className='order-last md:order-none' />
+          <ContentComponent className="order-last md:order-none" />
         </React.Fragment>
       )}
     </div>

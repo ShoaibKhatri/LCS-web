@@ -118,7 +118,9 @@ export const Navbar = (props: Navbar1Props) => {
             </div>
           ))}
           <div className="mt-6 flex flex-col items-center gap-4 lg:ml-4 lg:mt-0 lg:flex-row">
-            <PrimaryBtn variant="primary">Get a quote</PrimaryBtn>
+            <PrimaryBtn variant="primary" path="/contact">
+              Get a quote
+            </PrimaryBtn>
           </div>
         </motion.div>
       </div>

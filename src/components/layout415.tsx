@@ -61,55 +61,56 @@ export const Layout415 = (props: Layout415Props) => {
   });
 
   return (
-    <section ref={containerRef} className='px-[5%]'>
-      <div className='container'>
-        <div className='relative h-[300svh] lg:h-[300vh]'>
-          <div className='static grid h-full grid-cols-1 content-start items-center gap-x-20 gap-y-16 py-16 md:sticky md:top-0 md:h-svh md:grid-cols-2 md:content-normal md:py-0 lg:h-screen'>
+    <section ref={containerRef} className="px-[5%]">
+      <div className="container">
+        <div className="relative h-[300svh] lg:h-[300vh]">
+          <div className="static grid h-full grid-cols-1 content-start items-center gap-x-20 gap-y-16 py-16 md:sticky md:top-0 md:h-svh md:grid-cols-2 md:content-normal md:py-0 lg:h-screen">
             <div>
-              <p className='mb-3 font-semibold md:mb-4 text-blue-400'>
+              <p className="mb-3 font-semibold md:mb-4 text-blue-400">
                 {tagline}
               </p>
-              <h2 className='rb-5 mb-5 text-5xl font-extrabold md:mb-6 md:text-7xl lg:text-8xl'>
+              <h2 className="rb-5 mb-5 text-5xl font-extrabold md:mb-6 md:text-7xl lg:text-8xl">
                 Driven By
-                <span className='text-blue-600 ml-2'>Expertise</span>
+                <span className="text-blue-600 ml-2">Expertise</span>
               </h2>
-              <p className='md:text-md'>{description}</p>
-              <div className='mt-6 flex flex-wrap items-center gap-4 md:mt-8'>
-                <PrimaryBtn variant='primary'>
+              <p className="md:text-md">{description}</p>
+              <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
+                <PrimaryBtn variant="primary" path="/services">
                   Learn More
                   <img
-                    className='text-white inline-block ml-2'
+                    className="text-white inline-block ml-2"
                     src={Arrow}
-                    alt=''
+                    alt=""
                   />
                 </PrimaryBtn>
                 <SecondaryButton
-                  variant='transparent'
-                  color='blue'
+                  variant="transparent"
+                  color="blue"
                   sx={{
                     color: colors.blue500,
                     border: `1px solid ${colors.blue500}`,
                   }}
+                  path="/contact"
                 >
                   Contact Us
                 </SecondaryButton>
               </div>
             </div>
-            <div className='sticky top-[25%] flex min-h-[24.5rem] flex-col items-center justify-center md:relative md:top-0 md:min-h-[auto]'>
+            <div className="sticky top-[25%] flex min-h-[24.5rem] flex-col items-center justify-center md:relative md:top-0 md:min-h-[auto]">
               <img
                 src={Vector1}
-                className='hidden lg:block absolute top-[-300px] opacity-25 right-[40px] w-[200px] h-[200px] '
-                alt=''
+                className="hidden lg:block absolute top-[-300px] opacity-25 right-[40px] w-[200px] h-[200px] "
+                alt=""
               />
               <img
                 src={Vector2}
-                className='hidden lg:block absolute  opacity-25 right-[-100px] w-[200px] h-[200px] '
-                alt=''
+                className="hidden lg:block absolute  opacity-25 right-[-100px] w-[200px] h-[200px] "
+                alt=""
               />
               <img
                 src={Vector3}
-                className='hidden lg:block absolute bottom-[-300px] opacity-25 left-[100px] w-[200px] h-[200px] '
-                alt=''
+                className="hidden lg:block absolute bottom-[-300px] opacity-25 left-[100px] w-[200px] h-[200px] "
+                alt=""
               />
               {featureSections.map((section, index) => (
                 <FeatureSection
@@ -125,7 +126,7 @@ export const Layout415 = (props: Layout415Props) => {
           </div>
         </div>
       </div>
-      <div className='absolute inset-0 -z-10 mt-[100vh]' />
+      <div className="absolute inset-0 -z-10 mt-[100vh]" />
     </section>
   );
 };
@@ -177,14 +178,14 @@ const FeatureSection = ({
         backgroundRepeat: "no-repeat", // Prevents the image from repeating
       }}
     >
-      <div className='rb-6 mb-6 md:mb-8'>
+      <div className="rb-6 mb-6 md:mb-8">
         <img
           src={section.icon.src}
           alt={section.icon.alt}
-          className='size-12'
+          className="size-12"
         />
       </div>
-      <h3 className='mb-3 text-xl font-bold md:mb-4 md:text-2xl'>
+      <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
         {section.title}
       </h3>
       <p>{section.description}</p>

@@ -108,7 +108,7 @@ export const AboutHero = (props: Header129Props) => {
 
             <p className="md:text-md">{description}</p>
             <div className="mt-6 flex gap-x-4 md:mt-8">
-              <PrimaryBtn variant="primary">
+              <PrimaryBtn variant="primary" path="/services">
                 Get Started
                 <img src={Arrow} className="inline-block ml-2 " alt="" />
               </PrimaryBtn>
@@ -119,6 +119,7 @@ export const AboutHero = (props: Header129Props) => {
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path="/contact"
               >
                 Contact Us
               </SecondaryButton>
