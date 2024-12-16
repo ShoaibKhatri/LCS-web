@@ -1,6 +1,10 @@
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
+import { colors } from "../constants/theme";
+import Imgage105 from "../assets/images/image 105.png";
+import Imgage103 from "../assets/images/image 103.png";
+import Imgage104 from "../assets/images/image 104.png";
+import Imgage106 from "../assets/images/image 106.png";
 
 type ImageProps = {
   src: string;
@@ -35,11 +39,30 @@ export const Support = (props: Layout399Props) => {
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
           <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              {heading}
-            </h2>
-            <p className="md:text-md">{description}</p>
+            <h5
+              className="mb-1 pt-4 md:pt-0 font-thin leading-6 "
+              style={{
+                background: colors.themeGradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              END TO END SUPPORT
+            </h5>
+            <p className="text-4xl !mb-0 font-extrabold md:text-6xl lg:text-8xl leading-6">
+              Ensuring Success
+              <span
+                className=" ml-2"
+                style={{
+                  background: colors.themeGradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                At Every Stage
+              </span>
+            </p>
+            <p className="md:text-md text-gray-500 leading-6">{description}</p>
           </div>
         </div>
         <div className="grid auto-cols-fr grid-cols-1 gap-6 sm:grid-cols-2 md:gap-8 lg:grid-cols-4">
@@ -54,17 +77,30 @@ export const Support = (props: Layout399Props) => {
 
 const Card = (card: Card) => {
   return (
-    <div className="flex flex-col border border-border-primary">
+    <div
+      className="flex flex-col border border-gray-200 rounded-md"
+      style={{
+        boxShadow: "0px 20px 24px -4px rgba(0, 0, 0, 0.08)",
+        background: "rgba(249, 250, 251, 1)",
+      }}
+    >
       <div className="flex flex-1 flex-col justify-center p-6">
         <div>
-          <h3 className="mb-2 text-lg font-bold leading-[1.4] md:text-2xl leading-6">
+          <h3
+            className="mb-2 text-lg font-bold  md:text-2xl leading-6"
+            style={{
+              background: colors.themeGradient,
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             {card.heading}
           </h3>
           <p className="text-gray-500">{card.description}</p>
         </div>
       </div>
       <div className="flex w-full flex-col items-center justify-center self-start">
-        <img src={card.image.src} alt={card.image.alt} />
+        <img src={card.image.src} alt={card.image.alt} className="rounded-md" />
       </div>
     </div>
   );
@@ -73,12 +109,13 @@ const Card = (card: Card) => {
 export const Layout399Defaults: Props = {
   tagline: "Tagline",
   heading: "Short heading goes here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  description:
+    "We provide dedicated guidance and expertise throughout the entire project lifecycle to ensure optimal results and sustained success.",
   cards: [
     {
       tagline: "Tagline",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Imgage103,
         alt: "Relume placeholder image 1",
       },
       heading: "Transparent Hiring Process",
@@ -94,7 +131,7 @@ export const Layout399Defaults: Props = {
     {
       tagline: "Tagline",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Imgage104,
         alt: "Relume placeholder image 2",
       },
       heading: "Seamless Onboarding  Experience",
@@ -110,7 +147,7 @@ export const Layout399Defaults: Props = {
     {
       tagline: "Tagline",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Imgage105,
         alt: "Relume placeholder image 3",
       },
       heading: "Performance Monitoring",
@@ -126,7 +163,7 @@ export const Layout399Defaults: Props = {
     {
       tagline: "Tagline",
       image: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image-landscape.svg",
+        src: Imgage106,
         alt: "Relume placeholder image 4",
       },
       heading: "Regular Feedback & Alignment",

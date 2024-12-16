@@ -12,6 +12,7 @@ import CareerHeroBottom from "../assets/images/CareerBottom.svg";
 import SecondaryButton from "../components/secondaryBtn";
 import PrimaryBtn from "../components/primaryBtn";
 import { useLocation } from "react-router-dom";
+import backgroundImage from "../assets/images/LightGradient03.png";
 
 type ImageProps = {
   src: string;
@@ -52,7 +53,17 @@ export const AboutHero = (props: Header129Props) => {
     ...props,
   } as Props;
   return (
-    <section id='relume' className='px-[7.9%] py-16 md:py-24 lg:py-28'>
+    <section
+      id='relume'
+      className='px-[7.9%] py-16 md:py-24 lg:py-28'
+      style={{
+        backgroundImage: `
+        url(${location.pathname === "/careers" ? backgroundImage : ""} )`,
+        backgroundSize: "cover", // makes the image cover the whole area
+        backgroundPosition: "center", // centers the image
+        width: "100%",
+      }}
+    >
       <div className='container'>
         <div className='grid grid-cols-1 items-center gap-12 lg:grid-cols-2 md:gap-16'>
           <div>
