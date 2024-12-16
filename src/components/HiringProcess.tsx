@@ -72,10 +72,10 @@ export const HiringProcess = (props: Timeline9Props) => {
           <div className="relative grid grid-cols-1 justify-items-center gap-12 md:gap-20">
             <div className="absolute flex h-full w-8 flex-col items-center justify-self-start md:justify-self-auto">
               <div className="absolute z-10 h-16 w-1 bg-gradient-to-b from-background-primary to-transparent" />
-              <div className="sticky top-0 mt-[-50vh] h-[50vh] w-[3px] bg-neutral-black" />
+              {/* <div className="sticky top-0 mt-[-50vh] h-[50vh] w-[3px] bg-neutral-black" /> */}
               <div className="h-full w-[3px] bg-neutral-lighter" />
               <div className="absolute bottom-0 z-0 h-16 w-1 bg-gradient-to-b from-transparent to-background-primary" />
-              <div className="absolute top-[-50vh] h-[50vh] w-full bg-background-primary" />
+              {/* <div className="absolute top-[-50vh] h-[50vh] w-full bg-background-primary" /> */}
             </div>
             <React.Fragment>
               {timelineItems.map((item, index) => (
