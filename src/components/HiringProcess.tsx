@@ -1,12 +1,12 @@
 "use client";
 
 import React from "react";
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { useRef } from "react";
 import { motion, MotionStyle, useScroll, useTransform } from "framer-motion";
 import { RxChevronRight } from "react-icons/rx";
 import clsx from "clsx";
+import { colors } from "../constants/theme";
 
 type TimelineCircleProps = {
   backgroundColor: MotionStyle;
@@ -32,7 +32,7 @@ export type Timeline9Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const HiringProcess = (props: Timeline9Props) => {
-  const { tagline, heading, description, buttons, timelineItems } = {
+  const { description, timelineItems } = {
     ...Timeline9Defaults,
     ...props,
   };
@@ -43,18 +43,30 @@ export const HiringProcess = (props: Timeline9Props) => {
         <div className="flex flex-col items-center">
           <div className="mb-12 text-center md:mb-18 lg:mb-20">
             <div className="relative z-10 w-full max-w-lg">
-              <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
-              <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-                {heading}
+              <h5
+                className="mb-1 font-thin leading-6"
+                style={{
+                  background: colors.themeGradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                STREAMLINED HIRING PROCESS
+              </h5>
+              <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+                Key Steps Of
+                <span
+                  className=" ml-2"
+                  style={{
+                    background: colors.themeGradient,
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Hiring Process
+                </span>
               </h2>
-              <p className="md:text-md">{description}</p>
-              <div className="mt-6 flex items-center justify-center gap-x-4 md:mt-8">
-                {buttons.map((button, index) => (
-                  <Button key={index} {...button}>
-                    {button.title}
-                  </Button>
-                ))}
-              </div>
+              <p className="md:text-md text-gray-500">{description}</p>
             </div>
           </div>
           <div className="relative grid grid-cols-1 justify-items-center gap-12 md:gap-20">
@@ -145,18 +157,17 @@ const TimelineContent = ({
         "items-start text-left md:items-end md:text-right"
     )}
   >
-    <h3 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
+    <h3
+      className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl"
+      style={{
+        background: colors.themeGradient,
+        WebkitBackgroundClip: "text",
+        WebkitTextFillColor: "transparent",
+      }}
+    >
       {item.heading}
     </h3>
-    <h4 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">{item.title}</h4>
-    <p>{item.description}</p>
-    <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
-      {item.buttons.map((button, index) => (
-        <Button key={index} {...button}>
-          {button.title}
-        </Button>
-      ))}
-    </div>
+    <p className="text-gray-500 text-[16px]">{item.description}</p>
   </div>
 );
 
@@ -164,7 +175,7 @@ export const Timeline9Defaults: Props = {
   tagline: "Tagline",
   heading: "Medium length section heading goes here",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    "Follow our efficient, step-by-step process to quickly onboard the best talent and meet your project needs.",
   buttons: [
     { title: "Button", variant: "secondary" },
     {
@@ -176,10 +187,10 @@ export const Timeline9Defaults: Props = {
   ],
   timelineItems: [
     {
-      heading: "Date",
+      heading: "Client Needs Assessment",
       title: "Short heading here",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "We conduct a thorough analysis of your project requirements and technical needs, ensuring we understand every detail to deliver a tailored solution that aligns with your goals and expectations.",
       buttons: [
         { title: "Button", variant: "secondary" },
         {
@@ -191,10 +202,10 @@ export const Timeline9Defaults: Props = {
       ],
     },
     {
-      heading: "Date",
+      heading: "Talent Search",
       title: "Short heading here",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "We leverage our pre-screened database and AI-powered matching tools to identify the most qualified candidates, ensuring an optimal fit for your project needs and organizational culture.",
       buttons: [
         { title: "Button", variant: "secondary" },
         {
@@ -206,10 +217,10 @@ export const Timeline9Defaults: Props = {
       ],
     },
     {
-      heading: "Date",
+      heading: "Candidate Screening",
       title: "Short heading here",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "We perform thorough technical assessments and in-depth HR interviews to ensure candidates possess the required skills, experience, and cultural fit for your project and team.",
       buttons: [
         { title: "Button", variant: "secondary" },
         {
@@ -221,10 +232,10 @@ export const Timeline9Defaults: Props = {
       ],
     },
     {
-      heading: "Date",
+      heading: "Client Interview",
       title: "Short heading here",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        "We present a carefully curated list of shortlisted candidates, providing detailed profiles to help you make an informed final selection based on your project requirements and team dynamics.",
       buttons: [
         { title: "Button", variant: "secondary" },
         {

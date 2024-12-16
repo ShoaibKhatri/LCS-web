@@ -1,6 +1,11 @@
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
+import Magnifying from "../assets/images/MagnifyingGlass.svg";
+import SheildCheck from "../assets/images/ShieldCheck.svg";
+import Monitor from "../assets/images/Monitor.svg";
+import Globe from "../assets/images/Globe.svg";
+import { colors } from "../constants/theme";
+import StaffIndustriesImg from "../assets/images/StaffIndustries.svg";
 
 type ImageProps = {
   src: string;
@@ -27,15 +32,7 @@ export type Layout254Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const StaffIndustries = (props: Layout254Props) => {
-  const {
-    tagline,
-    heading,
-    description,
-    leftSections,
-    rightSections,
-    buttons,
-    image,
-  } = {
+  const { description, leftSections, rightSections, image } = {
     ...props,
     ...Layout254Defaults,
   };
@@ -44,12 +41,33 @@ export const StaffIndustries = (props: Layout254Props) => {
     <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
-          <div className="mx-auto max-w-lg text-center">
-            <p className="mb-3 font-semibold md:mb-4">{tagline}</p>
-            <h2 className="mb-5 text-5xl font-bold md:mb-6 md:text-7xl lg:text-8xl">
-              {heading}
+          <div className="mx-auto  text-center">
+            <h5
+              className="mb-1 font-thin leading-6 "
+              style={{
+                background: colors.themeGradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              INDUSTRIES
+            </h5>
+            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+              Catering to
+              <span
+                className=" ml-2"
+                style={{
+                  background: colors.themeGradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Diverse Business Verticals
+              </span>
             </h2>
-            <p className="md:text-md">{description}</p>
+            <p className="md:text-md text-gray-500 text-[18px]">
+              {description}
+            </p>
           </div>
         </div>
         <div className="grid place-items-center gap-x-8 gap-y-12 sm:grid-cols-2 md:gap-y-16 lg:grid-cols-[1fr_1.5fr_1fr] lg:gap-x-12">
@@ -58,17 +76,10 @@ export const StaffIndustries = (props: Layout254Props) => {
             <img
               src={image.src}
               alt={image.alt}
-              className="h-auto w-full object-cover"
+              className="h-auto w-full object-cover rounded-lg"
             />
           </div>
           <FeatureSection sections={rightSections} />
-        </div>
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-4 md:mt-18 lg:mt-20">
-          {buttons.map((button, index) => (
-            <Button key={index} {...button}>
-              {button.title}
-            </Button>
-          ))}
         </div>
       </div>
     </section>
@@ -86,10 +97,17 @@ const FeatureSection = ({ sections }: { sections: SectionProps[] }) => (
             alt={section.icon.alt}
           />
         </div>
-        <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
+        <h3
+          className="mb-3 text-xl font-bold md:mb-4 md:text-2xl"
+          style={{
+            background: colors.themeGradient,
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+          }}
+        >
           {section.heading}
         </h3>
-        <p>{section.description}</p>
+        <p className="text-gray-500 text-[16px]">{section.description}</p>
       </div>
     ))}
   </div>
@@ -99,45 +117,43 @@ export const Layout254Defaults: Props = {
   tagline: "Tagline",
   heading: "Medium length section heading goes here",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    "Our expertise spans a wide range of industries. Whether you’re in healthcare, eCommerce, education, or beyond, LCS understands your challenges and delivers innovative digital solutions to accelerate growth, streamline operations and improve efficiency.",
   leftSections: [
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: Magnifying,
         alt: "Relume logo 1",
       },
-      heading: "Short heading goes here",
+      heading: "Healthcare",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "Secure patient portals, telehealth  platforms, EMR solutions.",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: SheildCheck,
         alt: "Relume logo 2",
       },
-      heading: "Short heading goes here",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      heading: "eCommerce",
+      description: "Scalable storefronts, payment  integration, enhanced UX.",
     },
   ],
   rightSections: [
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: Monitor,
         alt: "Relume logo 3",
       },
-      heading: "Short heading goes here",
+      heading: "Manufacturing",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+        "Implement IoT-based solutions  for supply chain automation.",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: Globe,
         alt: "Relume logo 4",
       },
-      heading: "Short heading goes here",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      heading: "Education",
+      description: "Virtual classrooms, LMS, AI-driven  learning tools.",
     },
   ],
   buttons: [
@@ -150,7 +166,7 @@ export const Layout254Defaults: Props = {
     },
   ],
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: StaffIndustriesImg,
     alt: "Relume placeholder image",
   },
 };

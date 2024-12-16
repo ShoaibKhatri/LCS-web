@@ -1,3 +1,8 @@
+import CheckCircle from "../assets/images/CheckCircle.svg";
+import SketchLogo from "../assets/images/SketchLogo.svg";
+import SeamlessImg from "../assets/images/SeamlessImg.svg";
+import { colors } from "../constants/theme";
+
 type ImageProps = {
   src: string;
   alt?: string;
@@ -20,7 +25,7 @@ export type Layout203Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const SeamlessHiring = (props: Layout203Props) => {
-  const { heading, description, image, subHeadings } = {
+  const { description, image, subHeadings } = {
     ...Layout203Defaults,
     ...props,
   };
@@ -31,15 +36,37 @@ export const SeamlessHiring = (props: Layout203Props) => {
           <div className="order-2 md:order-1">
             <img
               src={image.src}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-lg"
               alt={image.alt}
             />
           </div>
           <div className="order-1 md:order-2">
-            <h3 className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl">
-              {heading}
-            </h3>
-            <p className="mb-6 md:mb-8 md:text-md">{description}</p>
+            <h5
+              className="mb-1 font-thin "
+              style={{
+                background: colors.themeGradient,
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Integration & Automation
+            </h5>
+            <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+              Empowering Teams with
+              <span
+                className=" ml-2"
+                style={{
+                  background: colors.themeGradient,
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Agile Talent Solutions
+              </span>
+            </h2>
+            <p className="mb-6 md:mb-8 md:text-md text-gray-500">
+              {description}
+            </p>
             <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               {subHeadings.map((subHeading, index) => (
                 <div key={index}>
@@ -50,10 +77,17 @@ export const SeamlessHiring = (props: Layout203Props) => {
                       alt={subHeading.icon.alt}
                     />
                   </div>
-                  <h6 className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl">
+                  <h6
+                    className="mb-3 text-md font-bold leading-[1.4] md:mb-4 md:text-xl"
+                    style={{
+                      background: colors.themeGradient,
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                    }}
+                  >
                     {subHeading.title}
                   </h6>
-                  <p>{subHeading.description}</p>
+                  <p className="text-gray-500">{subHeading.description}</p>
                 </div>
               ))}
             </div>
@@ -67,29 +101,29 @@ export const SeamlessHiring = (props: Layout203Props) => {
 export const Layout203Defaults: Props = {
   heading: "Long heading is what you see here in this feature section",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
+    "IT Staff Augmentation is a strategic approach where external talent is seamlessly integrated into your in-house team to  meet evolving project requirements.",
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: SeamlessImg,
     alt: "Relume placeholder image",
   },
   subHeadings: [
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: SketchLogo,
         alt: "Relume logo 1",
       },
-      title: "Subheading one",
+      title: "Unique Attributes",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Bridge skill gaps for niche technologies. Scale teams dynamically for project-specific needs. Reduce overhead costs without compromising expertise.",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: CheckCircle,
         alt: "Relume logo 2",
       },
-      title: "Subheading two",
+      title: "Essential For",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Supports innovation without long-term commitments. Empowers businesses to focus on core competencies while we handle staffing needs.",
     },
   ],
 };

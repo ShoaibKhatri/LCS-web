@@ -1,6 +1,10 @@
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
+import Code from "../assets/images/Code.svg";
+import CloudArrowUp from "../assets/images/CloudArrowUp.svg";
+import FrameCorners from "../assets/images/FrameCorners.svg";
+import Circuitry from "../assets/images/Circuitry.svg";
+import StaffTechImg from "../assets/images/staffTechImg.svg";
 
 type ImageProps = {
   src: string;
@@ -23,7 +27,7 @@ export type Layout220Props = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const StaffTechStack = (props: Layout220Props) => {
-  const { buttons, image, features } = {
+  const { image, features } = {
     ...Layout220Defaults,
     ...props,
   };
@@ -34,7 +38,7 @@ export const StaffTechStack = (props: Layout220Props) => {
           <div className="order-2 md:order-1">
             <img
               src={image.src}
-              className="w-full object-cover"
+              className="w-full object-cover rounded-lg"
               alt={image.alt}
             />
           </div>
@@ -52,15 +56,10 @@ export const StaffTechStack = (props: Layout220Props) => {
                   <h3 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">
                     {feature.heading}
                   </h3>
-                  <p>{feature.description}</p>
+                  <p className="text-gray-500 text-[16px]">
+                    {feature.description}
+                  </p>
                 </div>
-              ))}
-            </div>
-            <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-              {buttons.map((button, index) => (
-                <Button key={index} {...button}>
-                  {button.title}
-                </Button>
               ))}
             </div>
           </div>
@@ -81,45 +80,45 @@ export const Layout220Defaults: Props = {
     },
   ],
   image: {
-    src: "https://d22po4pjz3o32e.cloudfront.net/placeholder-image.svg",
+    src: StaffTechImg,
     alt: "Relume placeholder image",
   },
   features: [
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: Code,
         alt: "Relume logo 1",
       },
-      heading: "Short heading here",
+      heading: "Programming",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Leverage our expertise in Python, Java, C#, and .NET to build robust, scalable, and efficient solutions.",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: CloudArrowUp,
         alt: "Relume logo 2",
       },
-      heading: "Short heading here",
+      heading: "Cloud Platforms",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Our team brings advanced proficiency in AWS, Azure, and Google Cloud, offering efficient cloud solutions. ",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: FrameCorners,
         alt: "Relume logo 3",
       },
-      heading: "Short heading here",
+      heading: "Front-End",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Harness our mastery in React, Angular, and Vue.js to create dynamic web sites that deliver exceptional performance.",
     },
     {
       icon: {
-        src: "https://d22po4pjz3o32e.cloudfront.net/relume-icon.svg",
+        src: Circuitry,
         alt: "Relume logo 4",
       },
-      heading: "Short heading here",
+      heading: "Emerging Tech",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.",
+        "Leverage our specialization in AI/ML, Blockchain, and IoT to drive innovation and build cutting-edge solutions.",
     },
   ],
 };
