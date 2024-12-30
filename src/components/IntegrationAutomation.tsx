@@ -37,19 +37,19 @@ export const IntegrationAutomation = (props: Layout4Props) => {
     ...props,
   } as Props;
   return (
-    <section id='relume' className='px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50'>
-      <div className='container'>
-        <div className='grid grid-cols-1 gap-y-12 md:grid-flow-row lg:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20'>
+    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28 bg-blue-50">
+      <div className="container">
+        <div className="grid grid-cols-1 gap-y-12 md:grid-flow-row lg:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div>
             <img
               src={image.src}
-              className='w-full object-cover'
+              className="w-full object-cover"
               alt={image.alt}
             />
           </div>
           <div>
             <p
-              className='mb-3 font-semibold md:mb-4'
+              className="mb-3 font-semibold md:mb-4"
               style={{
                 background: colors.themeGradient,
                 WebkitBackgroundClip: "text",
@@ -58,10 +58,10 @@ export const IntegrationAutomation = (props: Layout4Props) => {
             >
               {tagline}
             </p>
-            <h2 className='rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl'>
+            <h2 className="rb-5 mb-5 text-4xl font-extrabold md:mb-6 md:text-6xl lg:text-8xl">
               Seamlessly Connect And
               <span
-                className=' ml-2'
+                className=" ml-2"
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -71,28 +71,29 @@ export const IntegrationAutomation = (props: Layout4Props) => {
                 Automate Your Systems
               </span>
             </h2>
-            <p className='mb-6 md:mb-8 md:text-md text-gray-500'>
+            <p className="mb-6 md:mb-8 md:text-md text-gray-500">
               {description}
             </p>
-            <div className='grid grid-cols-1 gap-6 py-2 sm:grid-cols-2'>
+            <div className="grid grid-cols-1 gap-6 py-2 sm:grid-cols-2">
               {subHeadings.map((subHeading, index) => (
                 <div key={index}>
-                  <img src={subHeading.img} className='size-12' alt='' />
-                  <h6 className='mb-3 text-md font-bold mt-2 leading-[1.4] md:mb-4 md:text-xl'>
+                  <img src={subHeading.img} className="size-12" alt="" />
+                  <h6 className="mb-3 text-md font-bold mt-2 leading-[1.4] md:mb-4 md:text-xl">
                     {subHeading.title}
                   </h6>
                   <p>{subHeading.description}</p>
                 </div>
               ))}
             </div>
-            <div className='mt-6 flex flex-wrap items-center gap-4 md:mt-8'>
+            <div className="mt-6 flex flex-wrap items-center gap-4 md:mt-8">
               <SecondaryButton
-                color='blue'
-                variant='transparent'
+                color="blue"
+                variant="transparent"
                 sx={{
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path="/contact"
               >
                 Contact Us
               </SecondaryButton>

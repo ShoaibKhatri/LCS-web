@@ -1,3 +1,5 @@
+/** @format */
+
 import "./App.css";
 import {
   BrowserRouter as Router,
@@ -18,6 +20,7 @@ import AllCaseStudies from "./pages/AllCaseStudies";
 import Project from "./pages/Project";
 import LoadingAnimation from "./components/LoadingAnimation";
 import StaffAug from "./pages/StaffAug";
+import AdminRoutes from "./pages/AdminRoutes/Index";
 
 function App() {
   function ScrollToTop() {
@@ -49,16 +52,17 @@ function App() {
           <ScrollToTop />
 
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-            <Route path="/industries" element={<Industries />} />
-            <Route path="/careers" element={<Careers />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/CaseStudies" element={<AllCaseStudies />} />
-            <Route path="/CaseStudies/:id" element={<Project />} />
-            <Route path="/staffAugmentaion" element={<StaffAug />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/industries' element={<Industries />} />
+            <Route path='/careers' element={<Careers />} />
+            <Route path='/services' element={<Services />} />
+            <Route path='/CaseStudies' element={<AllCaseStudies />} />
+            <Route path='/CaseStudies/:id' element={<Project />} />
+            <Route path='/staffAugmentaion' element={<StaffAug />} />
+            <Route path='/Admin-Panel/*' element={<AdminRoutes />} />
           </Routes>
         </Router>
       )}

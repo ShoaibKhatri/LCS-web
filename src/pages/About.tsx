@@ -38,7 +38,7 @@ const About = () => {
       <Navbar />
       <AboutHero {...AboutProps} />
       <AboutMission />
-      <AboutTeam />
+      {/* <AboutTeam /> */}
       <Gallery />
       <Partnering />
       <ContactComponent />

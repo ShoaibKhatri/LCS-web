@@ -67,7 +67,7 @@ export const IndustryHero = (props: Header137Props) => {
           </h2>
           <p className="md:text-md">{description}</p>
           <div className="mt-6 flex flex-wrap gap-4 md:mt-8">
-            <PrimaryBtn variant="primary">
+            <PrimaryBtn variant="primary" path="/contact">
               Find Your Industry Solution
             </PrimaryBtn>
           </div>

@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import React from "react";
@@ -38,13 +40,16 @@ export const HiringProcess = (props: Timeline9Props) => {
   };
 
   return (
-    <section id="relume" className="px-[5%] py-16 md:py-24 lg:py-28">
-      <div className="container">
-        <div className="flex flex-col items-center">
-          <div className="mb-12 text-center md:mb-18 lg:mb-20">
-            <div className="relative z-10 w-full max-w-lg">
+    <section
+      id='relume'
+      className='px-[5%] bg-[#EFF6FF] py-16 md:py-24 lg:py-28'
+    >
+      <div className='container'>
+        <div className='flex flex-col items-center'>
+          <div className='mb-12 text-center md:mb-18 lg:mb-20'>
+            <div className='relative z-10 w-full max-w-lg'>
               <h5
-                className="mb-1 font-thin leading-6"
+                className='mb-1 font-thin leading-6'
                 style={{
                   background: colors.themeGradient,
                   WebkitBackgroundClip: "text",
@@ -53,10 +58,10 @@ export const HiringProcess = (props: Timeline9Props) => {
               >
                 STREAMLINED HIRING PROCESS
               </h5>
-              <h2 className="rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl">
+              <h2 className='rb-5 mb-5 text-4xl font-bold md:mb-6 md:text-6xl lg:text-8xl'>
                 Key Steps Of
                 <span
-                  className=" ml-2"
+                  className=' ml-2'
                   style={{
                     background: colors.themeGradient,
                     WebkitBackgroundClip: "text",
@@ -66,15 +71,15 @@ export const HiringProcess = (props: Timeline9Props) => {
                   Hiring Process
                 </span>
               </h2>
-              <p className="md:text-md text-gray-500">{description}</p>
+              <p className='md:text-md text-gray-500'>{description}</p>
             </div>
           </div>
-          <div className="relative grid grid-cols-1 justify-items-center gap-12 md:gap-20">
-            <div className="absolute flex h-full w-8 flex-col items-center justify-self-start md:justify-self-auto">
-              <div className="absolute z-10 h-16 w-1 bg-gradient-to-b from-background-primary to-transparent" />
+          <div className='relative grid grid-cols-1 justify-items-center gap-12 md:gap-20'>
+            <div className='absolute flex h-full w-8 flex-col items-center justify-self-start md:justify-self-auto'>
+              <div className='absolute z-10 h-16 w-1 bg-gradient-to-b from-background-primary to-transparent' />
               {/* <div className="sticky top-0 mt-[-50vh] h-[50vh] w-[3px] bg-neutral-black" /> */}
-              <div className="h-full w-[3px] bg-neutral-lighter" />
-              <div className="absolute bottom-0 z-0 h-16 w-1 bg-gradient-to-b from-transparent to-background-primary" />
+              <div className='h-full w-[3px] bg-neutral-lighter' />
+              <div className='absolute bottom-0 z-0 h-16 w-1 bg-gradient-to-b from-transparent to-background-primary' />
               {/* <div className="absolute top-[-50vh] h-[50vh] w-full bg-background-primary" /> */}
             </div>
             <React.Fragment>
@@ -109,22 +114,22 @@ const TimelineItem = ({
   };
 
   return (
-    <div className="grid grid-cols-[max-content_1fr] items-start justify-items-center gap-4 md:grid-cols-[1fr_max-content_1fr] md:gap-8 lg:gap-12">
+    <div className='grid grid-cols-[max-content_1fr] items-start justify-items-center gap-4 md:grid-cols-[1fr_max-content_1fr] md:gap-8 lg:gap-12'>
       {isEven ? (
         <React.Fragment>
-          <div className="hidden w-full md:block" />
+          <div className='hidden w-full md:block' />
           <TimelineCircle ref={circleRef} backgroundColor={backgroundColor} />
           <TimelineContent item={item} />
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <TimelineContent item={item} alignment="right" />
+          <TimelineContent item={item} alignment='right' />
           <TimelineCircle
             ref={circleRef}
             backgroundColor={backgroundColor}
-            className="order-first md:order-none"
+            className='order-first md:order-none'
           />
-          <div className="hidden w-full md:block" />
+          <div className='hidden w-full md:block' />
         </React.Fragment>
       )}
     </div>
@@ -137,7 +142,7 @@ const TimelineCircle = React.forwardRef<HTMLDivElement, TimelineCircleProps>(
       <motion.div
         ref={ref}
         style={backgroundColor}
-        className="z-20 mt-7 size-[0.9375rem] rounded-full shadow-[0_0_0_8px_white] md:mt-8"
+        className='z-20 mt-7 size-[0.9375rem] rounded-full shadow-[0_0_0_8px_white] md:mt-8'
       />
     </div>
   )
@@ -158,7 +163,7 @@ const TimelineContent = ({
     )}
   >
     <h3
-      className="mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl"
+      className='mb-5 text-4xl font-bold leading-[1.2] md:mb-6 md:text-5xl lg:text-6xl'
       style={{
         background: colors.themeGradient,
         WebkitBackgroundClip: "text",
@@ -167,7 +172,7 @@ const TimelineContent = ({
     >
       {item.heading}
     </h3>
-    <p className="text-gray-500 text-[16px]">{item.description}</p>
+    <p className='text-gray-500 text-[16px]'>{item.description}</p>
   </div>
 );
 

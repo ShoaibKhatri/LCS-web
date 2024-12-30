@@ -5,6 +5,7 @@ import SecondaryButton from "../components/secondaryBtn";
 import PrimaryBtn from "../components/primaryBtn";
 import Arrow from "../assets/images/arrowWhite.svg";
 import { colors } from "../constants/theme";
+import { Link } from "react-router-dom";
 
 type ImageProps = {
   src: string;
@@ -57,7 +58,7 @@ export const Partnering = (props: Cta33Props) => {
             </h1>
             <p className='md:text-md text-gray-500'>{description}</p>
             <div className='mt-6 flex flex-wrap items-center justify-center gap-4 md:mt-8'>
-              <PrimaryBtn variant='primary'>
+              <PrimaryBtn variant='primary' path='/services'>
                 Learn More
                 <img src={Arrow} className='ml-2 inline-block' alt='' />
               </PrimaryBtn>
@@ -68,6 +69,7 @@ export const Partnering = (props: Cta33Props) => {
                   color: colors.blue500,
                   border: `1px solid ${colors.blue500}`,
                 }}
+                path='/contact'
               >
                 Contact Us
               </SecondaryButton>
@@ -75,22 +77,22 @@ export const Partnering = (props: Cta33Props) => {
           </div>
         </div>
 
-        <div className='text-center mt-4'>
-          <p className='mb-3 text-[16px] leading-4 font-semibold md:mb-4'>
+        {/* <div className="text-center mt-4">
+          <p className="mb-3 text-[16px] leading-4 font-semibold md:mb-4">
             Partnering with industry experts, we bring you the best resources
             and insights tailored to your needs.
           </p>
         </div>
-        <div className='flex flex-wrap items-center justify-center gap-x-8 gap-y-6 py-2'>
+        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-6 py-2">
           {logos.map((logo, index) => (
             <img
               key={index}
               src={logo.src}
               alt={logo.alt}
-              className='max-h-12 md:max-h-14'
+              className="max-h-12 md:max-h-14"
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );
@@ -99,7 +101,7 @@ export const Partnering = (props: Cta33Props) => {
 export const Cta33Defaults: Cta33Props = {
   heading: "Partner with LCS and unlock your full potential",
   description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+    "With our expert team, innovative solutions & commitment to your success, we are ready to help you take your business to the next level. Contact us today to get started!",
   buttons: [{ title: "Button" }, { title: "Button", variant: "secondary" }],
   logos: [
     {

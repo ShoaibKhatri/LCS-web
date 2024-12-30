@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { useMediaQuery } from "@relume_io/relume-ui";
@@ -51,29 +53,29 @@ export const Navbar = (props: Navbar1Props) => {
         boxShadow: "0px 7px 7px 0px #00000040",
         backdropFilter: "blur(15px)",
       }}
-      className="flex  w-full items-center fixed top-0 z-30 border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]"
+      className='flex  w-full items-center fixed top-0 z-30 bg-background-primary lg:min-h-18 lg:px-[5%]'
     >
-      <div className="size-full lg:flex lg:items-center lg:justify-between">
-        <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
-          <a href="/">
+      <div className='size-full lg:flex lg:items-center lg:justify-between'>
+        <div className='flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0'>
+          <a href='/'>
             <img src={Logo} alt={logo.alt} />
           </a>
           <button
-            className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+            className='-mr-2 flex size-12 flex-col items-center justify-center lg:hidden'
             onClick={() => setIsMobileMenuOpen((prev) => !prev)}
           >
             <motion.span
-              className="my-[3px] h-0.5 w-6 bg-black"
+              className='my-[3px] h-0.5 w-6 bg-black'
               animate={isMobileMenuOpen ? ["open", "rotatePhase"] : "closed"}
               variants={topLineVariants}
             />
             <motion.span
-              className="my-[3px] h-0.5 w-6 bg-black"
+              className='my-[3px] h-0.5 w-6 bg-black'
               animate={isMobileMenuOpen ? "open" : "closed"}
               variants={middleLineVariants}
             />
             <motion.span
-              className="my-[3px] h-0.5 w-6 bg-black"
+              className='my-[3px] h-0.5 w-6 bg-black'
               animate={isMobileMenuOpen ? ["open", "rotatePhase"] : "closed"}
               variants={bottomLineVariants}
             />
@@ -88,14 +90,14 @@ export const Navbar = (props: Navbar1Props) => {
               height: "var(--height-closed, 0)",
             },
           }}
-          initial="close"
-          exit="close"
+          initial='close'
+          exit='close'
           animate={isMobileMenuOpen ? "open" : "close"}
           transition={{ duration: 0.4 }}
-          className="overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]"
+          className='overflow-hidden px-[5%] lg:flex lg:items-center lg:px-0 lg:[--height-closed:auto] lg:[--height-open:auto]'
         >
           {navLinks.map((navLink, index) => (
-            <div key={index} className="first:pt-4 lg:first:pt-0">
+            <div key={index} className='first:pt-4 lg:first:pt-0'>
               {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (
                 <SubMenu navLink={navLink} isMobile={isMobile} />
               ) : (
@@ -112,13 +114,15 @@ export const Navbar = (props: Navbar1Props) => {
                   >
                     {navLink.title}
                   </Link>
-                  <span className="absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 transition-all duration-300 group-hover:w-full group-active:w-full"></span>
+                  <span className='absolute bottom-0 left-0 h-[2px] w-0 bg-red-600 transition-all duration-300 group-hover:w-full group-active:w-full'></span>
                 </>
               )}
             </div>
           ))}
-          <div className="mt-6 flex flex-col items-center gap-4 lg:ml-4 lg:mt-0 lg:flex-row">
-            <PrimaryBtn variant="primary">Get a quote</PrimaryBtn>
+          <div className='mt-6 flex flex-col items-center gap-4 lg:ml-4 lg:mt-0 lg:flex-row'>
+            <PrimaryBtn variant='primary' path='/contact'>
+              Get a quote
+            </PrimaryBtn>
           </div>
         </motion.div>
       </div>
@@ -141,7 +145,7 @@ const SubMenu = ({
       onMouseLeave={() => !isMobile && setIsDropdownOpen(false)}
     >
       <button
-        className="flex w-full items-center justify-between gap-2 py-3 text-left text-md lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base"
+        className='flex w-full items-center justify-between gap-2 py-3 text-left text-md lg:flex-none lg:justify-start lg:px-4 lg:py-2 lg:text-base'
         onClick={() => setIsDropdownOpen((prev) => !prev)}
       >
         <span>{navLink.title}</span>
@@ -172,16 +176,16 @@ const SubMenu = ({
               },
             }}
             animate={isDropdownOpen ? "open" : "close"}
-            initial="close"
-            exit="close"
+            initial='close'
+            exit='close'
             transition={{ duration: 0.2 }}
-            className="backdrop-blur-xl bg-white/30 lg:absolute lg:z-50 lg:border rounded-xl lg:p-2 lg:[--y-close:25%]"
+            className='backdrop-blur-xl bg-white/30 lg:absolute lg:z-50 lg:border rounded-xl lg:p-2 lg:[--y-close:25%]'
           >
             {navLink.subMenuLinks?.map((subLink, index) => (
               <Link
                 key={index}
                 to={subLink.url}
-                className="block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base hover:text-blue-500"
+                className='block py-3 pl-[5%] text-md lg:px-4 lg:py-2 lg:text-base hover:text-blue-500'
               >
                 {subLink.title}
               </Link>

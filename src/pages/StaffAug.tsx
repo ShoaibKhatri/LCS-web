@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import { StaffAugHero } from "../components/StaffAugHero";
 import { WhyChooseAug } from "../components/WhyChooseAug";
@@ -24,7 +26,7 @@ const StaffAug = () => {
       <StaffIndustries />
       <StaffTechStack />
       <HiringProcess />
-      <StaffTable />
+      {/* <StaffTable /> */}
       <Support />
       <StaffSuccess />
       <ContactComponent />
